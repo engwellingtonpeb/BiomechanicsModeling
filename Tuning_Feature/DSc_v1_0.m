@@ -1,0 +1,58 @@
+%-------------------------------------------------------------------------%
+%                  Federal University of Rio de Janeiro                   %
+%                 Biomedical Engineering Program - COPPE                  %
+%                                                                         %
+%  Author: Wellington Cássio Pinheiro, MSc.                               %
+%  Advisor: Luciano Luporini Menegaldo                                    %         
+%  Date: 24/12/2019                                                       %
+%  DSc - Version 1.0
+%-------------------------------------------------------------------------%
+% DSc ver 0 - Release 27/03/2019 - MSc thesis code. 
+%
+% DSc ver 1.0 and further are under version control. 
+% https://github.com/engwellingtonpeb/BiomechanicsModeling
+% Due date: 20/01/2020 ---- Release date:
+%
+% From this version on all functionalities will be built as functions, 
+% improving code control and maintenability
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%                   NEW FUNCTIONALITIES DSc ver 1.0
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   - Import patient data directly from inertial and EMG stored on XLS; -ok
+%   - Signal conditioning; -ok
+%   - Generates Matsuoka's oscillator config vectors from data;
+%   - Controller implemented as function with possible selection;    
+%   - Run autotune optimization;
+%   - Run longer simulation;
+%   - Compatibilize simulation and collected data (downsampling);
+%   - Generate plot (sprectrogram, FFT, limit-cycle, time-domain);
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+clc; clear all; close all hidden
+
+%% Gathering collected data from a specific patient.
+[PatientRawSignals] = ImportPatientData();
+
+%% Preprocessing patient signal
+[PatientConditionedSignals] = PatientSignalConditioning(PatientRawSignals);
+
+%% Extracting patient signal features to tune tremor model and generating a log file
+[OscillatorParam, CostParam]=PatientFeatureExtraction(PatientConditionedSignals);
+
+
+%% Model Tuning
+
+
+
+%% Simulation 60s
+
+
+%% Control Synthesis for FES
+
+%% Simulation with FES
+
+%% Deliverables - Controller for embedding and simulation results
+
+
+
