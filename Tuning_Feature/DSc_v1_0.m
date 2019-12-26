@@ -30,6 +30,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 clc; clear all; close all hidden
+load('26_Nov_2018_08_43_40_A0075_F50_ControllerDiscrete.mat')
 
 %% Gathering collected data from a specific patient.
 [PatientRawSignals] = ImportPatientData();
@@ -41,8 +42,21 @@ clc; clear all; close all hidden
 [OscillatorParam, CostParam]=PatientFeatureExtraction(PatientConditionedSignals);
 
 
-%% Model Tuning
 
+%% Model Tuning
+OptimizationAlgorithm.technique='ga';
+%OptimizationAlgorithm.technique='patternsearch';
+
+SimuInfo.Tend=2.5;
+SimuInfo.Ts=0.001;
+SimuInfo.opt=0;
+SimuInfo.Setpoint=[0,70];
+SimuInfo.p=OscillatorParam.P;
+Kz=c2d(K,SimuInfo.Ts);
+SimuInfo.Kz=Kz;
+SimuInfo.Saturation=1;
+
+[SimuInfo]=BiomechModelTunning(OscillatorParam, CostParam, OptimizationAlgorithm,SimuInfo)
 
 
 %% Simulation 60s

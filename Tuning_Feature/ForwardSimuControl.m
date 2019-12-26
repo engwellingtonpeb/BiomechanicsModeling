@@ -1,11 +1,12 @@
 function [motionData,U] = ForwardSimuControl(SimuInfo)
 %-------------------------------------------------------------------------%
 %                  Federal University of Rio de Janeiro                   %
-%                  Department of Biomedical Engineering                   %
+%                 Biomedical Engineering Program - COPPE                  %
 %                                                                         %
-%  Author: Wellington Cássio Pinheiro - MESTRADO                          %
+%  Author: Wellington Cássio Pinheiro, MSc.                               %
 %  Advisor: Luciano Luporini Menegaldo                                    %         
-%  Date: 16/10/2018   Versão atual 07/02/2019                             %
+%  Date: 24/12/2019                                                       %
+%  Last Update: DSc - Version 1.0                                         %  
 %-------------------------------------------------------------------------%
 %% Initialization
 import org.opensim.modeling.*
@@ -57,8 +58,8 @@ editableCoordSet.get('shoulder_elv').setLocked(osimState, true);
 editableCoordSet.get('shoulder_rot').setValue(osimState, 0);
 editableCoordSet.get('shoulder_rot').setLocked(osimState, true);
 
-% editableCoordSet.get('elbow_flexion').setValue(osimState, deg2rad(30));
-% editableCoordSet.get('elbow_flexion').setLocked(osimState, true);
+%editableCoordSet.get('elbow_flexion').setValue(osimState, deg2rad(30));
+%editableCoordSet.get('elbow_flexion').setLocked(osimState, true);
 
 editableCoordSet.get('pro_sup').setValue(osimState, deg2rad(90));
 editableCoordSet.get('pro_sup').setLocked(osimState, false);
@@ -79,7 +80,7 @@ osimState.getY.set(50,0); %zera ativacao inicial PQ
 osimState.getY.set(52,0); %zera ativacao inicial SUP
 
 
-%osimModel.getMuscles.get('PQ').setMaxIsometricForce(500);
+osimModel.getMuscles.get('PQ').setMaxIsometricForce(850);
 %% Prep Simulation
 
 osimModel.equilibrateMuscles(osimState); %solve for equilibrium similiar
@@ -90,7 +91,7 @@ Ts=SimuInfo.Ts;
 Tend=SimuInfo.Tend;
 %Integrate plant using Matlab Integrator
 timeSpan = [0:Ts:Tend];
-integratorName = 'ode5'; %fixed step Dormand-Prince method of order 5
+integratorName ='ode5'%'ode15s'; %fixed step Dormand-Prince method of order 5
 integratorOptions = odeset()
 
 %% Run Simulation

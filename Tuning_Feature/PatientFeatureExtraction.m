@@ -26,7 +26,7 @@ w1=(floor(N/Nplots));
 P=[]
 
 
-figure
+%figure
 for ij=1:Nplots
     F=0:.1:20;
     overlap=.5*Njan; % 50% overlap

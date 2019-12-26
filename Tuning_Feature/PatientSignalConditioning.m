@@ -6,7 +6,7 @@ function [PatientConditionedSignals] = PatientSignalConditioning(PatientRawSigna
 %  Author: Wellington Cássio Pinheiro, MSc.                               %
 %  Advisor: Luciano Luporini Menegaldo                                    %         
 %  Date: 24/12/2019                                                       %
-%  DSc - Version 1.0                                                      %
+%  Last Update: DSc - Version 1.0                                         %
 %-------------------------------------------------------------------------%
 % This function filters patient collected signal and preps it to feature  %
 % extraction                                                              %

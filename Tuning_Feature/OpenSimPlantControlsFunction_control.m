@@ -1,6 +1,13 @@
-%Versão Final Wellington 07/02/2019
-% ----------------------------------------------------------------------- 
-%OpenSimPlantControlsFunction  
+%-------------------------------------------------------------------------%
+%                  Federal University of Rio de Janeiro                   %
+%                 Biomedical Engineering Program - COPPE                  %
+%                                                                         %
+%  Author: Wellington Cássio Pinheiro, MSc.                               %
+%  Advisor: Luciano Luporini Menegaldo                                    %         
+%  Date: 24/12/2019                                                       %
+%  Last Update: DSc - Version 1.0                                                      %
+%-------------------------------------------------------------------------%
+%OpenSimPlantControlsFunction_control  
 %   outVector = OpenSimPlantControlsFunction(osimModel, osimState)
 %   This function computes a control vector which for the model's
 %   actuators.  The current code is for use with the script
@@ -13,7 +20,7 @@
 % Output:
 %   outVector is an org.opensim.Modeling.Vector of the control values
 % -----------------------------------------------------------------------
-function modelControls = OpenSimPlantControlsFunction03(osimModel, osimState,t,SimuInfo)
+function modelControls = OpenSimPlantControlsFunction_control(osimModel, osimState,t,SimuInfo)
     % Load Library
     import org.opensim.modeling.*;
     
@@ -93,6 +100,10 @@ ERR_POS=[err_pos];
 %% Control Signal Generation    
 % UNICO CONTROLADOR
 
+%[u,ALPHA] = OpenSimControlLaw(t,SimuInfo,err_pos) %Implement V2.0
+
+
+
 [Ak,Bk,Ck,Dk]=ssdata(SimuInfo.Kz);
 
     if length(xk1)<(length(Ak))
@@ -104,12 +115,12 @@ u=Ck*xk1+Dk*ERR_POS;
 xk1=xplus;
 
 %%
-u=[(u(1)) u(2) u(3) u(4)];
+u=[u(1) u(2) u(3) u(4)];
 
 
 [du_1,du_2] = oscillator(SimuInfo,t);
 % %% GANHOS ADAPTATIVOS PARA ELIMINAR UM MÚSCULO COMO FUNÇÃO DO ERRO
-% 
+
 eps_phi=rad2deg(err_pos(1));
 eps_psi=rad2deg(err_pos(2));
 
