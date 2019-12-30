@@ -48,7 +48,7 @@ function modelControls = OpenSimPlantControlsFunction_control(osimModel, osimSta
     uPQ=Vector(1,0.0);
     uSUP=Vector(1,0.0);
 
-    t
+    %t
 
     opt=SimuInfo.opt; %Parameter Parsing;
     p=SimuInfo.p;
@@ -102,8 +102,6 @@ ERR_POS=[err_pos];
 
 %[u,ALPHA] = OpenSimControlLaw(t,SimuInfo,err_pos) %Implement V2.0
 
-
-
 [Ak,Bk,Ck,Dk]=ssdata(SimuInfo.Kz);
 
     if length(xk1)<(length(Ak))
@@ -135,29 +133,35 @@ ALPHA4=(-0.5*((exp(eps_psi)-exp(-eps_psi))/((exp(eps_psi))+exp(-eps_psi))))+0.5;
 
  if t<1
 % 
-    u1=ALPHA1*(SimuInfo.Gains(1)*u(1)); %ECRL
-    u2=ALPHA2*(SimuInfo.Gains(2)*u(2)); %FCU
-    u3=ALPHA3*(SimuInfo.Gains(3)*u(3)); %PQ
-    u4=ALPHA4*(SimuInfo.Gains(4)*u(4)); %SUP
+%     u1=ALPHA1*(SimuInfo.Gains(1)*u(1)); %ECRL
+%     u2=ALPHA2*(SimuInfo.Gains(2)*u(2)); %FCU
+%     u3=ALPHA3*(SimuInfo.Gains(3)*u(3)); %PQ
+%     u4=ALPHA4*(SimuInfo.Gains(4)*u(4)); %SUP
+
+    u1=ALPHA1*(2*u(1)); %ECRL
+    u2=ALPHA2*(0.4*u(2)); %FCU
+    u3=ALPHA3*(1.5*u(3)); %PQ
+    u4=ALPHA4*(0.5*u(4)); %SUP
 % 
  else 
 %     
-    u1=ALPHA1*(SimuInfo.Gains(1)*u(1)+.025*du_1); %ECRL
-    u2=ALPHA2*(SimuInfo.Gains(2)*u(2)+.015*du_2); %FCU
-    u3=ALPHA3*(SimuInfo.Gains(3)*u(3)+0.75*du_1); %PQ
-    u4=ALPHA4*(SimuInfo.Gains(4)*u(4)+0.7*du_2); %SUP
-    
-%     u1=ALPHA1*0.1*du_1; %ECRL
-%     u2=ALPHA1*0.1*du_2; %FCU
-%     u3=ALPHA1*0.1*du_1; %PQ 
-%     u4=ALPHA1*0.1*du_2; %SUP
+%     u1=ALPHA1*(SimuInfo.Gains(1)*u(1)+.025*du_1); %ECRL
+%     u2=ALPHA2*(SimuInfo.Gains(2)*u(2)+.015*du_2); %FCU
+%     u3=ALPHA3*(SimuInfo.Gains(3)*u(3)+0.75*du_1); %PQ
+%     u4=ALPHA4*(SimuInfo.Gains(4)*u(4)+0.7*du_2); %SUP
 %     
+    u1=ALPHA1*(2*u(1)+SimuInfo.Gains(1)*du_1); %ECRL
+    u2=ALPHA2*(0.4*u(2)+SimuInfo.Gains(2)*du_2); %FCU
+    u3=ALPHA3*(1.5*u(3)+SimuInfo.Gains(3)*du_1); %PQ
+    u4=ALPHA4*(0.5*u(4)+SimuInfo.Gains(4)*du_2); %SUP
+    
+   
 end
 
 
 u=[u1 u2 u3 u4];
 
-% Actuators saturation (muscle excitation limits 0<=u<=1)
+%% Actuators saturation (muscle excitation limits 0<=u<=1)
 for i=1:length(u)
     if u(i)>=1
         u(i)=1;
@@ -167,27 +171,6 @@ for i=1:length(u)
         u(i)=0;
     end
 end
-
-
- 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%% ESSE IF FUNCIONA PRA CONTROLAR SETPOINT %%%%%%%%%%%%%%%%
-% u1=[];
-% u2=[];
-% 
-% if err_pos(1)>=0
-%     uFCU.set(0,0.5);
-%     u2=0.5;
-%     u1=0;
-% end
-% 
-% if err_pos(1)<0
-%    uECRL.set(0,1)
-%    u1=1;
-%    u2=0;
-% end
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 uECRL.set(0,u(1));
 uFCU.set(0,u(2));
@@ -209,7 +192,7 @@ uSUP.set(0,u(4));
 % else
 % 
 % 
-%  if (rem(j,1000)==0)
+%  if (rem(j,2000)==0)
 % 
 % 
 %     subplot(4,1,1)

@@ -2,32 +2,60 @@ function J = CostFunction4TuningTremor(Gains,OscillatorParam,CostParam,SimuInfo)
 
 
 Gains
-
-%load('distrib_tremor.mat')
 SimuInfo.Gains=Gains;
 
-[motionData]=ForwardSimuControl(SimuInfo);
-    
-SimuInfo.ElapsedTime=toc
-
-
-Phi=rad2deg(motionData.data(:,19));
-Psi=rad2deg(motionData.data(:,17));
-
+%% Patient Data
 Phi_patient=CostParam.Phi_ref;%SimuInfo.Setpoint(1)*ones(length(Phi),1);
 Phidot_patient=CostParam.Phidot_ref;
 Psi_patient=CostParam.Psi_ref;%SimuInfo.Setpoint(2)*ones(length(Psi),1);
-Psi_patient=CostParam.Psidot_ref;
+Psidot_patient=CostParam.Psidot_ref;
 
 
 
-J1=1e6;%(Phi_ref-Phi)'*(Phi_ref-Phi);
-J2=1e5;%(Psi_ref-Psi)'*(Psi_ref-Psi);
 
-J=1e-6*J1+1e-5*J2
+%% Simulation Data
+[motionData]=ForwardSimuControl(SimuInfo);
+SimuInfo.ElapsedTime=toc
+t_simu=motionData.data(:,1);
+Phi_simu=rad2deg(motionData.data(:,19));
+Psi_simu=rad2deg(motionData.data(:,17));
+Phidot_simu=rad2deg(motionData.data(:,39));
+Psidot_simu=rad2deg(motionData.data(:,37));
+
+%% Simulation Downsampling
+[Phi_simu,t_new] = resample(Phi_simu,t_simu,CostParam.Fs_gyro);
+[Psi_simu,t_new] = resample(Psi_simu,t_simu,CostParam.Fs_gyro);
+
+Psi_simu=Psi_simu-mean(Psi_simu);
+
+[Phidot_simu,t_new] = resample(Phidot_simu,t_simu,CostParam.Fs_gyro);
+[Psidot_simu,t_new] = resample(Psidot_simu,t_simu,CostParam.Fs_gyro);
+
+Nf=length(Phi_simu);
+Ni=ceil(SimuInfo.Ni);
+
+%% Cost for Tuning
+alpha=1;
+beta=1;
+do_shuffle=0;
+number_channels=1;
 
 
 
+[KLest, Hest, KL_means, H_means, N]=kl_estimation(Phi_patient(Ni:Ni+Nf-1), Phi_simu, alpha, beta, do_shuffle, number_channels);
+J1=max(max(KLest,KL_means'));
+
+[KLest, Hest, KL_means, H_means, N]=kl_estimation(Psi_patient(Ni:Ni+Nf-1), Psi_simu, alpha, beta, do_shuffle, number_channels);
+J2=max(max(KLest,KL_means'));
+
+[KLest, Hest, KL_means, H_means, N]=kl_estimation(Phidot_patient(Ni:Ni+Nf-1), Phidot_simu, alpha, beta, do_shuffle, number_channels);
+J3=max(max(KLest,KL_means'));
+
+[KLest, Hest, KL_means, H_means, N]=kl_estimation(Psidot_patient(Ni:Ni+Nf-1), Psidot_simu, alpha, beta, do_shuffle, number_channels);
+J4=max(max(KLest,KL_means'));
+
+
+J=J1+J2+J3+J4
 
 end
 

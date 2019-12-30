@@ -91,8 +91,8 @@ Ts=SimuInfo.Ts;
 Tend=SimuInfo.Tend;
 %Integrate plant using Matlab Integrator
 timeSpan = [0:Ts:Tend];
-integratorName ='ode5'%'ode15s'; %fixed step Dormand-Prince method of order 5
-integratorOptions = odeset()
+integratorName ='ode5';%'ode15s'; %fixed step Dormand-Prince method of order 5
+integratorOptions = odeset();
 
 %% Run Simulation
 %set(gcf, 'color', 'white');

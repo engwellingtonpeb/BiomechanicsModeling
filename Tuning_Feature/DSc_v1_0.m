@@ -21,11 +21,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   - Import patient data directly from inertial and EMG stored on XLS; -ok
 %   - Signal conditioning; -ok
-%   - Generates Matsuoka's oscillator config vectors from data;
-%   - Controller implemented as function with possible selection;    
-%   - Run autotune optimization;
+%   - Generates Matsuoka's oscillator config vectors from data; -ok
+%   - Run autotune optimization; -ok
 %   - Run longer simulation;
-%   - Compatibilize simulation and collected data (downsampling);
+%   - Compatibilize simulation and collected data (downsampling); -ok
 %   - Generate plot (sprectrogram, FFT, limit-cycle, time-domain);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -47,14 +46,15 @@ load('26_Nov_2018_08_43_40_A0075_F50_ControllerDiscrete.mat')
 OptimizationAlgorithm.technique='ga';
 %OptimizationAlgorithm.technique='patternsearch';
 
-SimuInfo.Tend=2.5;
-SimuInfo.Ts=0.001;
+SimuInfo.Tend=15;
+SimuInfo.Ts=0.0001;
 SimuInfo.opt=0;
 SimuInfo.Setpoint=[0,70];
 SimuInfo.p=OscillatorParam.P;
 Kz=c2d(K,SimuInfo.Ts);
 SimuInfo.Kz=Kz;
 SimuInfo.Saturation=1;
+SimuInfo.Ni=CostParam.Ni;
 
 [SimuInfo]=BiomechModelTunning(OscillatorParam, CostParam, OptimizationAlgorithm,SimuInfo)
 

@@ -58,5 +58,23 @@ CostParam.Phi_ref=PatientConditionedSignals.AngularPosition(:,3);
 CostParam.Phidot_ref=PatientConditionedSignals.AngularVelocity(:,3)
 CostParam.Psi_ref=PatientConditionedSignals.AngularPosition(:,2)
 CostParam.Psidot_ref=PatientConditionedSignals.AngularVelocity(:,2)
+CostParam.Fs_gyro=PatientConditionedSignals.Fs_gyro;
+
+
+plot(PatientConditionedSignals.AngularPosition(:,1),PatientConditionedSignals.AngularPosition(:,3))
+[x,y]=ginput(1);
+CostParam.Ni=x;
+close 
+
+date = datestr(datetime('now')); 
+date=regexprep(date, '\s', '_');
+date=strrep(date,':','_');
+date=strrep(date,'-','_');
+date=strcat(date,'_');
+global filename
+filename=strcat(date,'GA','.txt')
+
+
+fid=fopen(filename, 'w');
 end
 

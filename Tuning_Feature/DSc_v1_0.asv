@@ -19,9 +19,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %                   NEW FUNCTIONALITIES DSc ver 1.0
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%   - Import patient data directly from inertial and EMG stored on XLS;
-%   - Signal conditioning;
-%   - Generates Matsuoka's oscillator config file from data;
+%   - Import patient data directly from inertial and EMG stored on XLS; -ok
+%   - Signal conditioning; -ok
+%   - Generates Matsuoka's oscillator config vectors from data;
 %   - Controller implemented as function with possible selection;    
 %   - Run autotune optimization;
 %   - Run longer simulation;
@@ -30,21 +30,34 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 clc; clear all; close all hidden
+load('26_Nov_2018_08_43_40_A0075_F50_ControllerDiscrete.mat')
 
 %% Gathering collected data from a specific patient.
 [PatientRawSignals] = ImportPatientData();
 
 %% Preprocessing patient signal
-%[outputArg1,outputArg2] = PatientSignalConditioning(inputArg1,inputArg2);
+[PatientConditionedSignals] = PatientSignalConditioning(PatientRawSignals);
 
-%% Extracting patient signal features to tune tremor model and generating a
-%log file
-%[outputArg1,outputArg2] = PatientFeatureExtraction(inputArg1,inputArg2);
+%% Extracting patient signal features to tune tremor model and generating a log file
+[OscillatorParam, CostParam]=PatientFeatureExtraction(PatientConditionedSignals);
 
 
 
 %% Model Tuning
+OptimizationAlgorithm.technique='ga';
+%OptimizationAlgorithm.technique='patternsearch';
 
+SimuInfo.Tend=10;
+SimuInfo.Ts=0.0001;
+SimuInfo.opt=0;
+SimuInfo.Setpoint=[0,70];
+SimuInfo.p=OscillatorParam.P;
+Kz=c2d(K,SimuInfo.Ts);
+SimuInfo.Kz=Kz;
+SimuInfo.Saturation=1;
+Simu
+
+[SimuInfo]=BiomechModelTunning(OscillatorParam, CostParam, OptimizationAlgorithm,SimuInfo)
 
 
 %% Simulation 60s

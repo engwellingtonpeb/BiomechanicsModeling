@@ -12,9 +12,9 @@ function [SimuInfo]=BiomechModelTunning(OscillatorParam, CostParam, Optimization
 %with an optimization algorithm to tune model with patient extracted data %
 %--------------------------------------------------------------------------
 
-if OptimizationAlgorithm.technique=='ga'
+if (strcmp(OptimizationAlgorithm.technique,'ga'))
     
-    Gains=[0 0 0 0]
+    Gains=[0.025 0.015 0.75 0.7]
     A=[];
     b=[];
     Aeq = [];
@@ -32,7 +32,7 @@ if OptimizationAlgorithm.technique=='ga'
     % 
     % %figure
     options = optimoptions(@ga,'CrossoverFraction',0.6,'Display','iter',...
-        'FunctionTolerance',1e-2,'PopulationSize',60,'MaxGenerations',30,...
+        'FunctionTolerance',1e-2,'PopulationSize',24,'MaxGenerations',30,...
         'MutationFcn', {@mutationadaptfeasible,rate},'MaxStallGenerations',8,'OutputFcn',...
         @gaOutputFunc, 'UseParallel', true, 'CreationFcn',{@gacreationnonlinearfeasible},...
         'PlotFcn',{@gaplotscores,@gaplotbestf,@gaplotdistance},'ConstraintTolerance',1e-6,...
@@ -62,13 +62,31 @@ if OptimizationAlgorithm.technique=='ga'
     % 
 
     %diplay results
+    
+    SimuInfo.GAresults=[x,fval,exitflag,output,population,scores];
 
 
 end
 
-if OptimizationAlgorithm=='patternsearch'
+if (strcmp(OptimizationAlgorithm.technique,'patternsearch'))
+   
+    Gains=[0 0 0 0]
+    A=[];
+    b=[];
+    Aeq = [];
+    beq = [];
+    lb = [];
+    ub = [];
+    lb = [0 0 0 0];
+    ub = [2 2 2 2];
+    % ConstraintFunction = @gaConstrain;
+    ConstraintFunction=[]
     
-    %DEVELOPMENT @ DSc ver. 1.X
+    
+     options = optimoptions('patternsearch','Display','iter','PlotFcn',{@psplotbestf,@psplotfuncount}, 'UseParallel',true);
+    [x,fval,exitflag,output] = patternsearch(@(Gains)CostFunction4TuningTremor(Gains,OscillatorParam,CostParam,SimuInfo),...
+                                           Gains,A,b,Aeq,beq,lb,ub,ConstraintFunction,options)
+ 
 end
 %%
 % load history.mat
