@@ -38,15 +38,16 @@ load('26_Nov_2018_08_43_40_A0075_F50_ControllerDiscrete.mat')
 [PatientConditionedSignals] = PatientSignalConditioning(PatientRawSignals);
 
 %% Extracting patient signal features to tune tremor model and generating a log file
-[OscillatorParam, CostParam]=PatientFeatureExtraction(PatientConditionedSignals);
+
+OptimizationAlgorithm.technique='ga';
+%OptimizationAlgorithm.technique='patternsearch';
+[OscillatorParam, CostParam]=PatientFeatureExtraction(PatientConditionedSignals, OptimizationAlgorithm);
 
 
 
 %% Model Tuning
-OptimizationAlgorithm.technique='ga';
-%OptimizationAlgorithm.technique='patternsearch';
 
-SimuInfo.Tend=15;
+SimuInfo.Tend=10;
 SimuInfo.Ts=0.0001;
 SimuInfo.opt=0;
 SimuInfo.Setpoint=[0,70];

@@ -1,4 +1,4 @@
-function [OscillatorParam, CostParam]=PatientFeatureExtraction(PatientConditionedSignals);
+function [OscillatorParam, CostParam]=PatientFeatureExtraction(PatientConditionedSignals, OptimizationAlgorithm)
 %-------------------------------------------------------------------------%
 %                  Federal University of Rio de Janeiro                   %
 %                 Biomedical Engineering Program - COPPE                  %
@@ -72,8 +72,14 @@ date=strrep(date,':','_');
 date=strrep(date,'-','_');
 date=strcat(date,'_');
 global filename
-filename=strcat(date,'GA','.txt')
 
+if (strcmp(OptimizationAlgorithm.technique,'ga'))
+    filename=strcat(date,'GA','.txt')
+end
+
+if (strcmp(OptimizationAlgorithm.technique,'patternsearch'))
+    filename=strcat(date,'PS','.txt')
+end
 
 fid=fopen(filename, 'w');
 end
