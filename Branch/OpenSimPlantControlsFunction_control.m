@@ -41,7 +41,7 @@ function [modelControls,SimuInfo] = OpenSimPlantControlsFunction03(osimModel, os
     uPQ=Vector(1,0.0);
     uSUP=Vector(1,0.0);
 
-    t
+    %t
 
     opt=SimuInfo.opt; %Parameter Parsing;
     Gain=SimuInfo.Gains;

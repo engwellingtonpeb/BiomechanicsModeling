@@ -40,8 +40,8 @@ rate=0.30;
 
 %figure
 options = optimoptions(@ga,'CrossoverFraction',0.6,'Display','iter',...
-    'FunctionTolerance',1e-2,'PopulationSize',60,'MaxGenerations',30,...
-    'MutationFcn', {@mutationadaptfeasible,rate},'MaxStallGenerations',8,'OutputFcn',...
+    'FunctionTolerance',1e-5,'PopulationSize',60,'MaxGenerations',30,...
+    'MutationFcn', {@mutationadaptfeasible,rate},'MaxStallGenerations',15,'OutputFcn',...
     @gaOutputFunc, 'UseParallel', true, 'CreationFcn',{@gacreationnonlinearfeasible},...
     'PlotFcn',{@gaplotscores,@gaplotbestf,@gaplotdistance},'ConstraintTolerance',1e-6,...
     'NonlinearConstraintAlgorithm','Penalty')
@@ -71,7 +71,7 @@ fun=@CostFun;
 %diplay results
 
 %%
-load history.mat
+%load history.mat
 figure
 for k=1:output.generations
     sortedcost(:,k)=sort(cost(:,k));
@@ -80,3 +80,4 @@ for k=1:output.generations
 imagesc((sortedcost(:,1:output.generations)))
 ll=colorbar;
 set(ll,'color','w')
+set(gcf,'Position',[100 100 600 300])
