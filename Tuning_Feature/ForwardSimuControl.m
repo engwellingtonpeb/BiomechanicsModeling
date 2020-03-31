@@ -1,4 +1,4 @@
-function [motionData,U] = ForwardSimuControl(SimuInfo)
+function [motionData] = ForwardSimuControl(SimuInfo)
 %-------------------------------------------------------------------------%
 %                  Federal University of Rio de Janeiro                   %
 %                 Biomedical Engineering Program - COPPE                  %

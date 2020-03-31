@@ -23,9 +23,9 @@
 %   - Signal conditioning; -ok
 %   - Generates Matsuoka's oscillator config vectors from data; -ok
 %   - Run autotune optimization; -ok
-%   - Run longer simulation;
+%   - Run longer simulation; - fail
 %   - Compatibilize simulation and collected data (downsampling); -ok
-%   - Generate plot (sprectrogram, FFT, limit-cycle, time-domain);
+%   - Generate plot (sprectrogram, FFT, limit-cycle, time-domain); - fail
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 clc; clear all; close all hidden
@@ -39,8 +39,8 @@ load('26_Nov_2018_08_43_40_A0075_F50_ControllerDiscrete.mat')
 
 %% Extracting patient signal features to tune tremor model and generating a log file
 
-OptimizationAlgorithm.technique='ga';
-%OptimizationAlgorithm.technique='patternsearch';
+%OptimizationAlgorithm.technique='ga';
+OptimizationAlgorithm.technique='patternsearch';
 [OscillatorParam, CostParam]=PatientFeatureExtraction(PatientConditionedSignals, OptimizationAlgorithm);
 
 
@@ -61,7 +61,9 @@ SimuInfo.Ni=CostParam.Ni;
 
 
 %% Simulation 60s
-
+%SimuInfo.Gains=[1.91898485278581 1.38965724595163 0.325223470389261 1.68143451196733]
+SimuInfo.Tend=60;
+[motionData] = ForwardSimuControl(SimuInfo)
 
 %% Control Synthesis for FES
 

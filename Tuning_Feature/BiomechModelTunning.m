@@ -64,7 +64,7 @@ if (strcmp(OptimizationAlgorithm.technique,'ga'))
     %diplay results
     
     SimuInfo.GAresults=[x,fval,exitflag,output,population,scores];
-
+    SimuInfo.Gains=x;
 
 end
 
@@ -87,6 +87,10 @@ if (strcmp(OptimizationAlgorithm.technique,'patternsearch'))
     [x,fval,exitflag,output] = patternsearch(@(Gains)CostFunction4TuningTremor(Gains,OscillatorParam,CostParam,SimuInfo),...
                                            Gains,A,b,Aeq,beq,lb,ub,ConstraintFunction,options)
  
+                                       
+                                       
+    SimuInfo.PSresults=[x,fval,exitflag,output];
+    SimuInfo.Gains=x;
 end
 %%
 % load history.mat
