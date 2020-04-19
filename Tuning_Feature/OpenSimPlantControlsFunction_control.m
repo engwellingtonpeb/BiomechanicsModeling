@@ -73,8 +73,8 @@ persistent ERR_POS
 persistent xk1
 persistent u
 
-persistent phi_storage
-persistent psi_storage
+%persistent phi_storage
+%persistent psi_storage
 
    
 %% Plant control implementation 
@@ -86,11 +86,11 @@ psi_ref=deg2rad(SimuInfo.Setpoint(2));
 
 phi=osimState.getY().get(17); % wrist flexion angle (rad)
 % rad2deg(phi);
-phi_storage=[phi_storage;rad2deg(phi)];
+%phi_storage=[phi_storage;rad2deg(phi)];
 
 
 psi=osimState.getY().get(15); % pro_sup angle (rad)
-psi_storage=[psi_storage;rad2deg(psi)];
+%psi_storage=[psi_storage;rad2deg(psi)];
 
 err_pos=[phi_ref-phi ; psi_ref-psi];
 

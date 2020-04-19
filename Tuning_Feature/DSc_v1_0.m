@@ -61,9 +61,9 @@ SimuInfo.Ni=CostParam.Ni;
 
 
 %% Simulation 60s
-%SimuInfo.Gains=[1.91898485278581 1.38965724595163 0.325223470389261 1.68143451196733]
-SimuInfo.Tend=60;
-[motionData] = ForwardSimuControl(SimuInfo)
+% SimuInfo.Gains=[1.91898485278581 1.38965724595163 0.325223470389261 1.68143451196733]
+% SimuInfo.Tend=10;
+% [motionData] = ForwardSimuControl(SimuInfo)
 
 %% Control Synthesis for FES
 
