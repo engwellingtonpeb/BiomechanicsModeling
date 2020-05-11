@@ -3,7 +3,7 @@ function J = CostFun(Gains)
 
 Gains
 SimuInfo.Tend=2;
-SimuInfo.Ts=0.0001;
+SimuInfo.Ts=0.0002;
 SimuInfo.opt=0;
 SimuInfo.Gains=Gains;
 SimuInfo.Setpoint=[0,70];
