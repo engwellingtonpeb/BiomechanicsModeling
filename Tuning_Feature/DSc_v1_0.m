@@ -23,9 +23,10 @@
 %   - Signal conditioning; -ok
 %   - Generates Matsuoka's oscillator config vectors from data; -ok
 %   - Run autotune optimization; -ok
-%   - Run longer simulation; - fail
 %   - Compatibilize simulation and collected data (downsampling); -ok
+
 %   - Generate plot (sprectrogram, FFT, limit-cycle, time-domain); - fail
+%   - Run longer simulation; - fail
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 clc; clear all; close all hidden
@@ -54,6 +55,11 @@ SimuInfo.Setpoint=[0,70];
 SimuInfo.p=OscillatorParam.P;
 Kz=c2d(K,SimuInfo.Ts);
 SimuInfo.Kz=Kz;
+[Ak,Bk,Ck,Dk]=ssdata(SimuInfo.Kz);
+SimuInfo.Ak=Ak;
+SimuInfo.Bk=Bk;
+SimuInfo.Ck=Ck;
+SimuInfo.Dk=Dk;
 SimuInfo.Saturation=1;
 SimuInfo.Ni=CostParam.Ni;
 

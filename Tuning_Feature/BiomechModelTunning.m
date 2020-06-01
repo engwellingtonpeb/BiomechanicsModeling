@@ -22,46 +22,24 @@ if (strcmp(OptimizationAlgorithm.technique,'ga'))
     lb = [];
     ub = [];
     lb = [0 0 0 0];
-    ub = [2 2 2 2];
+    ub = [1.5 1.5 1.5 1.5];
     % ConstraintFunction = @gaConstrain;
     ConstraintFunction=[]
     % %options=[];
     rate=0.30;
-    % 
-    % 
-    % 
-    % %figure
+
     options = optimoptions(@ga,'CrossoverFraction',0.6,'Display','iter',...
-        'FunctionTolerance',1e-2,'PopulationSize',18,'MaxGenerations',30,...
+        'FunctionTolerance',1e-2,'PopulationSize',24,'MaxGenerations',50,...
         'MutationFcn', {@mutationadaptfeasible,rate},'MaxStallGenerations',8,'OutputFcn',...
         @gaOutputFunc, 'UseParallel', true, 'CreationFcn',{@gacreationnonlinearfeasible},...
         'PlotFcn',{@gaplotscores,@gaplotbestf,@gaplotdistance},'ConstraintTolerance',1e-6,...
         'NonlinearConstraintAlgorithm','Penalty');
-    % 
-    % %fun=@CostFun(Gains,filename);
-    % % ConstraintFunction = @TuneConstraints
+
     nvars=4;
-    % 
-    % 
-    % 
-    % date = datestr(datetime('now')); 
-    % date=regexprep(date, '\s', '_');
-    % date=strrep(date,':','_');
-    % date=strrep(date,'-','_');
-    % date=strcat(date,'_');
-    % global filename
-    % filename=strcat(date,'GA','.txt')
-    % 
-    % 
-    % fid=fopen(filename, 'w');
-    %fun=@CostFunction4TuningTremor;      
-    % 
+  
     [x,fval,exitflag,output,population,scores] = ga(@(Gains)CostFunction4TuningTremor(Gains,OscillatorParam,CostParam,SimuInfo),...
                                            nvars,A,b,Aeq,beq,lb,ub,ConstraintFunction,options)
-    % 
-    % 
 
-    %diplay results
     
     SimuInfo.GAresults=[x,fval,exitflag,output,population,scores];
     SimuInfo.Gains=x;
@@ -78,7 +56,7 @@ if (strcmp(OptimizationAlgorithm.technique,'patternsearch'))
     lb = [];
     ub = [];
     lb = [0 0 0 0];
-    ub = [2 2 2 2];
+    ub = [1.5 1.5 1.5 1.5];
     % ConstraintFunction = @gaConstrain;
     ConstraintFunction=[]
     

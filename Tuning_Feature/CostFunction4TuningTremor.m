@@ -42,20 +42,26 @@ number_channels=1;
 
 
 
-[KLest, Hest, KL_means, H_means, N]=kl_estimation(Phi_patient(Ni:Ni+Nf-1), Phi_simu, alpha, beta, do_shuffle, number_channels);
-J1=max(max(KLest,KL_means'));
+    if (sum(isnan(motionData.data(:)))~=0)
+        J=1e6;
+    else
+        [KLest, Hest, KL_means, H_means, N]=kl_estimation(Phi_patient(Ni:Ni+Nf-1), Phi_simu, alpha, beta, do_shuffle, number_channels);
+        J1=max(max(KLest,KL_means'));
 
-[KLest, Hest, KL_means, H_means, N]=kl_estimation(Psi_patient(Ni:Ni+Nf-1), Psi_simu, alpha, beta, do_shuffle, number_channels);
-J2=max(max(KLest,KL_means'));
+        [KLest, Hest, KL_means, H_means, N]=kl_estimation(Psi_patient(Ni:Ni+Nf-1), Psi_simu, alpha, beta, do_shuffle, number_channels);
+        J2=max(max(KLest,KL_means'));
 
-[KLest, Hest, KL_means, H_means, N]=kl_estimation(Phidot_patient(Ni:Ni+Nf-1), Phidot_simu, alpha, beta, do_shuffle, number_channels);
-J3=max(max(KLest,KL_means'));
+        [KLest, Hest, KL_means, H_means, N]=kl_estimation(Phidot_patient(Ni:Ni+Nf-1), Phidot_simu, alpha, beta, do_shuffle, number_channels);
+        J3=max(max(KLest,KL_means'));
 
-[KLest, Hest, KL_means, H_means, N]=kl_estimation(Psidot_patient(Ni:Ni+Nf-1), Psidot_simu, alpha, beta, do_shuffle, number_channels);
-J4=max(max(KLest,KL_means'));
+        [KLest, Hest, KL_means, H_means, N]=kl_estimation(Psidot_patient(Ni:Ni+Nf-1), Psidot_simu, alpha, beta, do_shuffle, number_channels);
+        J4=max(max(KLest,KL_means'));
 
-
-J=J1+J2+J3+J4
-
+        J=J1+J2+J3+J4
+    end
+    
+    
+    
+    
 end
 

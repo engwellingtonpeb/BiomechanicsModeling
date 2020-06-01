@@ -10,7 +10,7 @@ function [motionData] = ForwardSimuControl(SimuInfo)
 %-------------------------------------------------------------------------%
 %% Initialization
 import org.opensim.modeling.*
-osimModel=Model('C:\Users\engwe\Desktop\UFRJ - DOUTORADO\ModeloTremor2019\models\MoBL_ARMS_tutorial_33\MoBL-ARMS OpenSim tutorial_33\ModelFiles\MoBL_ARMS_module2_4_allmuscles.osim');
+osimModel=Model('.\models\MoBL_ARMS_tutorial_33\MoBL-ARMS OpenSim tutorial_33\ModelFiles\MoBL_ARMS_module2_4_allmuscles.osim');
 
 %osimModel.setUseVisualizer(true);
 
@@ -103,46 +103,6 @@ tic
        
 toc
 
-% %% Re-sample excitations
-% 
-% global U
-% % global F
-% % global R
-%  %%
-% a=length(U(:,1));
-% timeU=0:(timeSpan(end)/a):timeSpan(end);
-% timeU=timeU(1:end-1);
-% %%
-% 
-% 
-% tsin1=timeseries(U',timeU);
-% tsout=resample(tsin1,motionData.data(:,1));
-% U=tsout.data;
-% U=(U(:,:))';
-% 
-% %%
-% % tsin2=timeseries(F((1:length(timeU)),:),timeU);
-% % tsout=resample(tsin2,motionData.data(:,1));
-% % F=tsout.data;
-% % 
-% % %%
-% % tsin13=timeseries(R((1:length(timeU)),:),timeU);
-% % tsout=resample(tsin13,motionData.data(:,1));
-% % R=tsout.data;
-% 
-% 
-% %% NaN
-% indexNaN=find(isnan(U(:,1)));
-% fillNaN=find(~isnan(U(:,1)));
-% 
-% for i=1:length(indexNaN)
-%     
-%     %F(indexNaN(i),:)=F((indexNaN(1)-1),:);
-%     U(indexNaN(i),:)=U((indexNaN(1)-1),:);
-%     %R(indexNaN(i),:)=R((indexNaN(1)-1),:);
-% i=i+1;
-% end
-% 
 
 end
 

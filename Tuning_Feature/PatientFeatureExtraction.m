@@ -56,6 +56,7 @@ OscillatorParam.P=P;
 
 CostParam.Phi_ref=PatientConditionedSignals.AngularPosition(:,3);
 CostParam.Phidot_ref=PatientConditionedSignals.AngularVelocity(:,3)
+
 CostParam.Psi_ref=PatientConditionedSignals.AngularPosition(:,2)
 CostParam.Psidot_ref=PatientConditionedSignals.AngularVelocity(:,2)
 CostParam.Fs_gyro=PatientConditionedSignals.Fs_gyro;
@@ -66,21 +67,20 @@ plot(PatientConditionedSignals.AngularPosition(:,1),PatientConditionedSignals.An
 CostParam.Ni=x;
 close 
 
-date = datestr(datetime('now')); 
-date=regexprep(date, '\s', '_');
-date=strrep(date,':','_');
-date=strrep(date,'-','_');
-date=strcat(date,'_');
+
+formatOut = 'yyyy/mm/dd/HH/MM/SS';
+date=datestr(now,formatOut);
+date=strrep(date,'/','_');
+
 global filename
 
 if (strcmp(OptimizationAlgorithm.technique,'ga'))
-    filename=strcat(date,'GA','.txt')
+    filename=strcat(date,'_GA','.txt')
 end
 
 if (strcmp(OptimizationAlgorithm.technique,'patternsearch'))
-    filename=strcat(date,'PS','.txt')
+    filename=strcat(date,'_PS','.txt')
 end
-
 fid=fopen(filename, 'w');
 end
 

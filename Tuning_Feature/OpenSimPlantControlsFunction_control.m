@@ -48,33 +48,15 @@ function modelControls = OpenSimPlantControlsFunction_control(osimModel, osimSta
     uPQ=Vector(1,0.0);
     uSUP=Vector(1,0.0);
 
-    %t
 
-    opt=SimuInfo.opt; %Parameter Parsing;
-    p=SimuInfo.p;
 %% Read plant angles for feedback and avoid NaN 
     
-
-% if t==Time(end)
-%     return;
-% end
-% 
-% Time=[Time t];
- 
-
-
-uecrl=[];
-ufcu=[];
-upq=[];
-usup=[];
-Tcont=[];
 
 persistent ERR_POS
 persistent xk1
 persistent u
 
-%persistent phi_storage
-%persistent psi_storage
+
 
    
 %% Plant control implementation 
@@ -85,12 +67,7 @@ psi_ref=deg2rad(SimuInfo.Setpoint(2));
 
 
 phi=osimState.getY().get(17); % wrist flexion angle (rad)
-% rad2deg(phi);
-%phi_storage=[phi_storage;rad2deg(phi)];
-
-
 psi=osimState.getY().get(15); % pro_sup angle (rad)
-%psi_storage=[psi_storage;rad2deg(psi)];
 
 err_pos=[phi_ref-phi ; psi_ref-psi];
 
@@ -102,14 +79,13 @@ ERR_POS=[err_pos];
 
 %[u,ALPHA] = OpenSimControlLaw(t,SimuInfo,err_pos) %Implement V2.0
 
-[Ak,Bk,Ck,Dk]=ssdata(SimuInfo.Kz);
 
-    if length(xk1)<(length(Ak))
-        xk1=zeros(length(Ak),1);
+    if length(xk1)<(length(SimuInfo.Ak))
+        xk1=zeros(length(SimuInfo.Ak),1);
     end
 
-xplus=(Ak*xk1)+(Bk*ERR_POS);
-u=Ck*xk1+Dk*ERR_POS;
+xplus=(SimuInfo.Ak*xk1)+(SimuInfo.Bk*ERR_POS);
+u=SimuInfo.Ck*xk1+SimuInfo.Dk*ERR_POS;
 xk1=xplus;
 
 %%
@@ -186,58 +162,58 @@ uSUP.set(0,u(4));
   
     
 %% ============  REAL TIME PLOT ===============
-    persistent j
-if (t==0)
-    j=0;
-else
-
-
- if (rem(j,1000)==0)
-
-
-    subplot(4,1,1)
-    plot(t,rad2deg(phi_ref),'go',t,rad2deg(phi),'r.')
-    axis([t-3 t -40 40])
-    drawnow;
-    grid on;
-    hold on;
-    
-    subplot(4,1,2)
-    plot(t,rad2deg(psi_ref),'go',t,rad2deg(psi),'k.')
-    axis([t-3 t 50 100])
-    drawnow;
-    grid on;
-    hold on;
-    
-    subplot(4,1,3)
-    plot(t,u(1),'b.',t,u(2),'r.')
-    axis([t-3 t -1 1])
-    drawnow;
-    grid on;
-    hold on;
-
-%     subplot(4,1,3)
-%     plot(t,Y1(1,end),'b.',t,Y1(2,end),'r.')
-%     axis([t-3 t -2 2])
+%     persistent j
+% if (t==0)
+%     j=0;
+% else
+% 
+% 
+%  if (rem(j,1000)==0)
+% 
+% 
+%     subplot(4,1,1)
+%     plot(t,rad2deg(phi_ref),'go',t,rad2deg(phi),'r.')
+%     axis([t-3 t -40 40])
 %     drawnow;
 %     grid on;
 %     hold on;
-
-    subplot(4,1,4)
-    plot(t,u(3),'b.',t,u(4),'r.')
-    axis([t-3 t -1 1])
-    drawnow;
-    grid on;
-    hold on;
-
-%     subplot(4,1,4)
+%     
+%     subplot(4,1,2)
+%     plot(t,rad2deg(psi_ref),'go',t,rad2deg(psi),'k.')
+%     axis([t-3 t 50 100])
+%     drawnow;
+%     grid on;
+%     hold on;
+%     
+%     subplot(4,1,3)
 %     plot(t,u(1),'b.',t,u(2),'r.')
 %     axis([t-3 t -1 1])
 %     drawnow;
 %     grid on;
 %     hold on;
-
-
- end
- j=j+1;
+% 
+% %     subplot(4,1,3)
+% %     plot(t,Y1(1,end),'b.',t,Y1(2,end),'r.')
+% %     axis([t-3 t -2 2])
+% %     drawnow;
+% %     grid on;
+% %     hold on;
+% 
+%     subplot(4,1,4)
+%     plot(t,u(3),'b.',t,u(4),'r.')
+%     axis([t-3 t -1 1])
+%     drawnow;
+%     grid on;
+%     hold on;
+% 
+% %     subplot(4,1,4)
+% %     plot(t,u(1),'b.',t,u(2),'r.')
+% %     axis([t-3 t -1 1])
+% %     drawnow;
+% %     grid on;
+% %     hold on;
+% 
+% 
+%  end
+%  j=j+1;
 end
