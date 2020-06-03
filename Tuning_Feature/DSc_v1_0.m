@@ -33,17 +33,15 @@ clc; clear all; close all hidden
 load('26_Nov_2018_08_43_40_A0075_F50_ControllerDiscrete.mat')
 
 %% Gathering collected data from a specific patient.
-%OriginFlag='UNIFESP';
-OriginFlag='UFRJ';
-[PatientRawSignals] = ImportPatientData(OriginFlag);
+[PatientRawSignals] = ImportPatientData();
 
 %% Preprocessing patient signal
 [PatientConditionedSignals] = PatientSignalConditioning(PatientRawSignals);
 
 %% Extracting patient signal features to tune tremor model and generating a log file
 
-%OptimizationAlgorithm.technique='ga';
-OptimizationAlgorithm.technique='patternsearch';
+OptimizationAlgorithm.technique='ga';
+%OptimizationAlgorithm.technique='patternsearch';
 [OscillatorParam, CostParam]=PatientFeatureExtraction(PatientConditionedSignals, OptimizationAlgorithm);
 
 
@@ -70,9 +68,16 @@ SimuInfo.Ni=CostParam.Ni;
 
 %% Simulation 60s
 % SimuInfo.Gains=[1.91898485278581 1.38965724595163 0.325223470389261 1.68143451196733]
-SimuInfo.Gains=[0.4512    0.6089    0.2861    0.3069];
-SimuInfo.Tend=10;
+SimuInfo.Tend=20;
 [motionData] = ForwardSimuControl(SimuInfo)
+
+indir=pwd;
+indir=strcat(indir,'\log_files');
+global filename;
+filename=strcat(filename,'MotionResults')
+extension='.mat';
+motionFilename=fullfile(indir,[filename extension]);
+save(motionFilename,'motionData','SimuInfo');
 
 %% Control Synthesis for FES
 

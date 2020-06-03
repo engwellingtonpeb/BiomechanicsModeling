@@ -20,8 +20,8 @@ PatientConditionedSignals.Fs_acc=PatientRawSignals.Fs_acc;
 
 %% Prep Filter Kinematic signals 
     Fs_gyro=PatientRawSignals.Fs_gyro;
-    fc=8;    %20
-    delta=1; %10
+    fc=20;
+    delta=10;
     Wp=(fc-delta)/(Fs_gyro/2);
     Ws=(fc+delta)/(Fs_gyro/2);
     Rp=0.1;
@@ -30,7 +30,16 @@ PatientConditionedSignals.Fs_acc=PatientRawSignals.Fs_acc;
     [B,A] = butter(Ng,Wn);
     
     
-
+%% Prep Filter sEMG
+    Fs_semg=PatientRawSignals.Fs_semg;
+    fc=30;
+    delta=10;
+    Wp=(fc-delta)/(Fs_semg/2);
+    Ws=(fc+delta)/(Fs_semg/2);
+    Rp=0.1;
+    Rs=60;
+    [Ng,Wn] = buttord(Wp, Ws, Rp, Rs);
+    [C,D] = butter(Ng,Wn);
 
 %% Kinematic Signals
 
@@ -58,27 +67,16 @@ PatientConditionedSignals.AngularVelocity=[PatientRawSignals.gyro(:,1),Xgyro_f];
 PatientConditionedSignals.AngularAcc=[PatientRawSignals.acc(:,1),Xacc_f];
 
 %% Activation 
+   
+%normalize sEMG
+  Xemg(:,1)=PatientRawSignals.sEMG(:,2)./max(PatientRawSignals.sEMG(:,2));
+  Xemg(:,2)=PatientRawSignals.sEMG(:,3)./max(PatientRawSignals.sEMG(:,3));
 
-%% Prep Filter sEMG
-%     Fs_semg=PatientRawSignals.Fs_semg;
-%     fc=20;
-%     delta=10;
-%     Wp=(fc-delta)/(Fs_semg/2);
-%     Ws=(fc+delta)/(Fs_semg/2);
-%     Rp=0.1;
-%     Rs=60;
-%     [Ng,Wn] = buttord(Wp, Ws, Rp, Rs);
-%     [C,D] = butter(Ng,Wn);
-%    
-% %normalize sEMG
-%   Xemg(:,1)=PatientRawSignals.sEMG(:,2)./max(PatientRawSignals.sEMG(:,2));
-%   Xemg(:,2)=PatientRawSignals.sEMG(:,3)./max(PatientRawSignals.sEMG(:,3));
-% 
-% %low pass filtering
-% 
-%     activation(:,1)=filtfilt(C,D,Xemg(:,1));
-%     activation(:,2)=filtfilt(C,D,Xemg(:,2));
-% 
-%     PatientConditionedSignals.Activation=[PatientRawSignals.sEMG(:,1),activation(:,1),activation(:,2)];
+%low pass filtering
+
+    activation(:,1)=filtfilt(C,D,Xemg(:,1));
+    activation(:,2)=filtfilt(C,D,Xemg(:,2));
+
+    PatientConditionedSignals.Activation=[PatientRawSignals.sEMG(:,1),activation(:,1),activation(:,2)];
 end
 

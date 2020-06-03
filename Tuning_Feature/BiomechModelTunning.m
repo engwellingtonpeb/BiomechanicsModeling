@@ -14,7 +14,8 @@ function [SimuInfo]=BiomechModelTunning(OscillatorParam, CostParam, Optimization
 
 if (strcmp(OptimizationAlgorithm.technique,'ga'))
     
-    Gains=[0.025 0.015 0.75 0.7]
+    %Gains=[0.025 0.015 0.75 0.7]
+    Gains=[1 1 1 1]
     A=[];
     b=[];
     Aeq = [];
@@ -29,7 +30,7 @@ if (strcmp(OptimizationAlgorithm.technique,'ga'))
     rate=0.30;
 
     options = optimoptions(@ga,'CrossoverFraction',0.6,'Display','iter',...
-        'FunctionTolerance',1e-2,'PopulationSize',24,'MaxGenerations',50,...
+        'FunctionTolerance',1e-2,'PopulationSize',2,'MaxGenerations',3,...
         'MutationFcn', {@mutationadaptfeasible,rate},'MaxStallGenerations',8,'OutputFcn',...
         @gaOutputFunc, 'UseParallel', true, 'CreationFcn',{@gacreationnonlinearfeasible},...
         'PlotFcn',{@gaplotscores,@gaplotbestf,@gaplotdistance},'ConstraintTolerance',1e-6,...
@@ -72,12 +73,13 @@ if (strcmp(OptimizationAlgorithm.technique,'patternsearch'))
  
                                        
                                        
-
+    SimuInfo.PSresults=[x,fval,exitflag,output];
     SimuInfo.OptmGains=x;
     SimuInfo.OptmBestCost=fval;
     SimuInfo.Optmflag=exitflag;
     SimuInfo.OptmOut=output;
     SimuInfo.Gains=x;
+
 end
 %%
 % load history.mat

@@ -72,7 +72,7 @@ formatOut = 'yyyy/mm/dd/HH/MM/SS';
 date=datestr(now,formatOut);
 date=strrep(date,'/','_');
 
-global filename
+global logFilename
 
 if (strcmp(OptimizationAlgorithm.technique,'ga'))
     filename=strcat(date,'_GA','.txt')
@@ -81,6 +81,12 @@ end
 if (strcmp(OptimizationAlgorithm.technique,'patternsearch'))
     filename=strcat(date,'_PS','.txt')
 end
-fid=fopen(filename, 'w');
+
+indir=pwd;
+indir=strcat(indir,'\log_files');
+extension='.txt';
+logFilename=fullfile(indir,[filename extension]);
+
+fid=fopen(logFilename, 'w');
 end
 
