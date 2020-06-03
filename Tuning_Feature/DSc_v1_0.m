@@ -33,7 +33,9 @@ clc; clear all; close all hidden
 load('26_Nov_2018_08_43_40_A0075_F50_ControllerDiscrete.mat')
 
 %% Gathering collected data from a specific patient.
-[PatientRawSignals] = ImportPatientData();
+%OriginFlag='UNIFESP';
+OriginFlag='UFRJ';
+[PatientRawSignals] = ImportPatientData(OriginFlag);
 
 %% Preprocessing patient signal
 [PatientConditionedSignals] = PatientSignalConditioning(PatientRawSignals);
@@ -68,8 +70,9 @@ SimuInfo.Ni=CostParam.Ni;
 
 %% Simulation 60s
 % SimuInfo.Gains=[1.91898485278581 1.38965724595163 0.325223470389261 1.68143451196733]
-% SimuInfo.Tend=10;
-% [motionData] = ForwardSimuControl(SimuInfo)
+SimuInfo.Gains=[0.4512    0.6089    0.2861    0.3069];
+SimuInfo.Tend=10;
+[motionData] = ForwardSimuControl(SimuInfo)
 
 %% Control Synthesis for FES
 

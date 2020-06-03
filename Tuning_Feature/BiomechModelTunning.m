@@ -41,7 +41,12 @@ if (strcmp(OptimizationAlgorithm.technique,'ga'))
                                            nvars,A,b,Aeq,beq,lb,ub,ConstraintFunction,options)
 
     
-    SimuInfo.GAresults=[x,fval,exitflag,output,population,scores];
+    SimuInfo.OptmGains=x;
+    SimuInfo.OptmBestCost=fval;
+    SimuInfo.Optmflag=exitflag;
+    SimuInfo.OptmOut=output;
+    SimuInfo.OptmPop=population;
+    SimuInfo.OptmScores=scores;
     SimuInfo.Gains=x;
 
 end
@@ -61,13 +66,17 @@ if (strcmp(OptimizationAlgorithm.technique,'patternsearch'))
     ConstraintFunction=[]
     
     
-     options = optimoptions('patternsearch','Display','iter','PlotFcn',{@psplotbestf,@psplotfuncount}, 'UseParallel',true);
+     options = optimoptions('patternsearch','Display','iter','PlotFcn',{@psplotbestf,@psplotfuncount},'OutputFcn',@gaOutputFunc, 'UseParallel',true);
     [x,fval,exitflag,output] = patternsearch(@(Gains)CostFunction4TuningTremor(Gains,OscillatorParam,CostParam,SimuInfo),...
                                            Gains,A,b,Aeq,beq,lb,ub,ConstraintFunction,options)
  
                                        
                                        
-    SimuInfo.PSresults=[x,fval,exitflag,output];
+
+    SimuInfo.OptmGains=x;
+    SimuInfo.OptmBestCost=fval;
+    SimuInfo.Optmflag=exitflag;
+    SimuInfo.OptmOut=output;
     SimuInfo.Gains=x;
 end
 %%
