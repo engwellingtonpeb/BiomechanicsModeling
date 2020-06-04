@@ -33,10 +33,12 @@ clc; clear all; close all hidden
 load('26_Nov_2018_08_43_40_A0075_F50_ControllerDiscrete.mat')
 
 %% Gathering collected data from a specific patient.
-[PatientRawSignals] = ImportPatientData();
+OriginFlag='UFRJ';
+%OriginFlag='UNIFESP';
+[PatientRawSignals] = ImportPatientData(OriginFlag);
 
 %% Preprocessing patient signal
-[PatientConditionedSignals] = PatientSignalConditioning(PatientRawSignals);
+[PatientConditionedSignals] = PatientSignalConditioning(PatientRawSignals, OriginFlag);
 
 %% Extracting patient signal features to tune tremor model and generating a log file
 

@@ -1,4 +1,4 @@
-function [PatientConditionedSignals] = PatientSignalConditioning(PatientRawSignals)
+function [PatientConditionedSignals] = PatientSignalConditioning(PatientRawSignals,OriginFlag)
 %-------------------------------------------------------------------------%
 %                  Federal University of Rio de Janeiro                   %
 %                 Biomedical Engineering Program - COPPE                  %
@@ -19,6 +19,7 @@ PatientConditionedSignals.Fs_acc=PatientRawSignals.Fs_acc;
 
 
 %% Prep Filter Kinematic signals 
+if(strcmp(OriginFlag,'UNIFESP'))    
     Fs_gyro=PatientRawSignals.Fs_gyro;
     fc=20;
     delta=10;
@@ -28,18 +29,21 @@ PatientConditionedSignals.Fs_acc=PatientRawSignals.Fs_acc;
     Rs=60;
     [Ng,Wn] = buttord(Wp, Ws, Rp, Rs);
     [B,A] = butter(Ng,Wn);
-    
-    
-%% Prep Filter sEMG
-    Fs_semg=PatientRawSignals.Fs_semg;
-    fc=30;
-    delta=10;
-    Wp=(fc-delta)/(Fs_semg/2);
-    Ws=(fc+delta)/(Fs_semg/2);
+else
+    Fs_gyro=PatientRawSignals.Fs_gyro;
+    fc=8;
+    delta=1;
+    Wp=(fc-delta)/(Fs_gyro/2);
+    Ws=(fc+delta)/(Fs_gyro/2);
     Rp=0.1;
     Rs=60;
     [Ng,Wn] = buttord(Wp, Ws, Rp, Rs);
-    [C,D] = butter(Ng,Wn);
+    [B,A] = butter(Ng,Wn);
+    
+end
+    
+    
+
 
 %% Kinematic Signals
 
@@ -67,16 +71,27 @@ PatientConditionedSignals.AngularVelocity=[PatientRawSignals.gyro(:,1),Xgyro_f];
 PatientConditionedSignals.AngularAcc=[PatientRawSignals.acc(:,1),Xacc_f];
 
 %% Activation 
-   
-%normalize sEMG
-  Xemg(:,1)=PatientRawSignals.sEMG(:,2)./max(PatientRawSignals.sEMG(:,2));
-  Xemg(:,2)=PatientRawSignals.sEMG(:,3)./max(PatientRawSignals.sEMG(:,3));
 
-%low pass filtering
-
-    activation(:,1)=filtfilt(C,D,Xemg(:,1));
-    activation(:,2)=filtfilt(C,D,Xemg(:,2));
-
-    PatientConditionedSignals.Activation=[PatientRawSignals.sEMG(:,1),activation(:,1),activation(:,2)];
+% % Prep Filter sEMG
+%     Fs_semg=PatientRawSignals.Fs_semg;
+%     fc=30;
+%     delta=10;
+%     Wp=(fc-delta)/(Fs_semg/2);
+%     Ws=(fc+delta)/(Fs_semg/2);
+%     Rp=0.1;
+%     Rs=60;
+%     [Ng,Wn] = buttord(Wp, Ws, Rp, Rs);
+%     [C,D] = butter(Ng,Wn);
+%    
+% %normalize sEMG
+%   Xemg(:,1)=PatientRawSignals.sEMG(:,2)./max(PatientRawSignals.sEMG(:,2));
+%   Xemg(:,2)=PatientRawSignals.sEMG(:,3)./max(PatientRawSignals.sEMG(:,3));
+% 
+% %low pass filtering
+% 
+%     activation(:,1)=filtfilt(C,D,Xemg(:,1));
+%     activation(:,2)=filtfilt(C,D,Xemg(:,2));
+% 
+%     PatientConditionedSignals.Activation=[PatientRawSignals.sEMG(:,1),activation(:,1),activation(:,2)];
 end
 

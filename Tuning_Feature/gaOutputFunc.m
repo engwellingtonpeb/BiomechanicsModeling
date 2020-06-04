@@ -7,8 +7,6 @@ optchanged = false;
 
 Gen=[state.Population,state.Score];
  global logFilename
- 
-
  fid=fopen(logFilename, 'a')
  for i=1:length(state.Score)
     %fprintf(fid, '%.5s %.5s %.5s %.5s %.5s %.5s %.5s %.5s - %.5s\n',Gen{i,1},Gen{i,2},Gen{i,3},Gen{i,4},Gen{i,5},Gen{i,6},Gen{i,7},Gen{i,8},Gen{i,9});
