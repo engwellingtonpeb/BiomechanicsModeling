@@ -43,7 +43,7 @@ number_channels=1;
 
 
     if (sum(isnan(motionData.data(:)))~=0)
-        J=1e6;
+        J=1e3;
     else
         [KLest, Hest, KL_means, H_means, N]=kl_estimation(Phi_patient(Ni:Ni+Nf-1), Phi_simu, alpha, beta, do_shuffle, number_channels);
         J1=max(max(KLest,KL_means'));

@@ -33,8 +33,8 @@ clc; clear all; close all hidden
 load('26_Nov_2018_08_43_40_A0075_F50_ControllerDiscrete.mat')
 
 %% Gathering collected data from a specific patient.
-OriginFlag='UFRJ';
-%OriginFlag='UNIFESP';
+%OriginFlag='UFRJ';
+OriginFlag='UNIFESP';
 [PatientRawSignals] = ImportPatientData(OriginFlag);
 
 %% Preprocessing patient signal
@@ -75,8 +75,8 @@ SimuInfo.Tend=20;
 
 indir=pwd;
 indir=strcat(indir,'\log_files');
-global filename;
-filename=strcat(filename,'MotionResults')
+global logFilename
+filename=strcat(logFilename,'_MotionResults')
 extension='.mat';
 motionFilename=fullfile(indir,[filename extension]);
 save(motionFilename,'motionData','SimuInfo');
