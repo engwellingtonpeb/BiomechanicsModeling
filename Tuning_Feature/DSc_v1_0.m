@@ -70,13 +70,14 @@ SimuInfo.Ni=CostParam.Ni;
 
 %% Simulation 60s
 % SimuInfo.Gains=[1.91898485278581 1.38965724595163 0.325223470389261 1.68143451196733]
-SimuInfo.Tend=20;
+% SimuInfo.Gains=[1.1480    0.9629    1.0712    0.7103]
+SimuInfo.Tend=.2;
 [motionData] = ForwardSimuControl(SimuInfo)
 
 indir=pwd;
 indir=strcat(indir,'\log_files');
-global logFilename
-filename=strcat(logFilename,'_MotionResults')
+global filename
+filename=strcat(filename,'_MotionResults')
 extension='.mat';
 motionFilename=fullfile(indir,[filename extension]);
 save(motionFilename,'motionData','SimuInfo');

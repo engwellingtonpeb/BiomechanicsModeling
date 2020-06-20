@@ -126,12 +126,15 @@ ALPHA4=(-0.5*((exp(eps_psi)-exp(-eps_psi))/((exp(eps_psi))+exp(-eps_psi))))+0.5;
 %     u3=ALPHA3*(SimuInfo.Gains(3)*u(3)+0.75*du_1); %PQ
 %     u4=ALPHA4*(SimuInfo.Gains(4)*u(4)+0.7*du_2); %SUP
 %     
+%     u1=ALPHA1*(u(1)+SimuInfo.Gains(1)*du_1); %ECRL
+%     u2=ALPHA2*(0.1*u(2)+SimuInfo.Gains(2)*du_2); %FCU
+%     u3=ALPHA3*(u(3)+SimuInfo.Gains(3)*du_1); %PQ
+%     u4=ALPHA4*(0.5*u(4)+SimuInfo.Gains(4)*du_2); %SUP
+    
     u1=ALPHA1*(u(1)+SimuInfo.Gains(1)*du_1); %ECRL
     u2=ALPHA2*(0.1*u(2)+SimuInfo.Gains(2)*du_2); %FCU
-    u3=ALPHA3*(u(3)+SimuInfo.Gains(3)*du_1); %PQ
-    u4=ALPHA4*(0.5*u(4)+SimuInfo.Gains(4)*du_2); %SUP
-    
-   
+    u3=ALPHA3*(u(3)+SimuInfo.Gains(3)*du_2); %PQ
+    u4=ALPHA4*(0.5*u(4)+SimuInfo.Gains(4)*du_1); %SUP   
 end
 
 

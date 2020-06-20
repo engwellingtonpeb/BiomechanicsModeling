@@ -73,13 +73,14 @@ date=datestr(now,formatOut);
 date=strrep(date,'/','_');
 
 global logFilename
+global filename
 
 if (strcmp(OptimizationAlgorithm.technique,'ga'))
-    filename=strcat(date,'_GA','.txt')
+    filename=strcat(date,'_GA')
 end
 
 if (strcmp(OptimizationAlgorithm.technique,'patternsearch'))
-    filename=strcat(date,'_PS','.txt')
+    filename=strcat(date,'_PS')
 end
 
 indir=pwd;
