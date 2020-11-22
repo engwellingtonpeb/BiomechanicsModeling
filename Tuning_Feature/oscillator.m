@@ -1,7 +1,7 @@
 function [du_1,du_2] = oscillator(SimuInfo,t)
 %MATSUOKA'S OSCILLATOR FUNCTION
 
-p=SimuInfo.p;
+P=SimuInfo.p;
 persistent X
 persistent V
 persistent Y1
@@ -15,20 +15,23 @@ if (t==0)
     R=[Kf];
 else
 
-    if (rem(j1,5000)==0)
-        T=-0.35+(gendist(p/570,570,1))*.21;
-        aa=1;
-        bb=570;
-        rr=(bb-aa).*rand(570,1)+aa;
-        rr=round(rr);
-        rindex=rr(10);
-        Kf=T(rindex)/2;
+    if (rem(j1,20000)==0)
+            r=round(random(SimuInfo.pd,1,1));
+            P(r)
+            Tosc=1/P(r);
+            Kf=(Tosc)/.1051;
+         
+         
+         
          R=[Kf];
     end
      j1=j1+1;
  
 end
 
+%% DISTRIBUTION ADJUST
+%%T=-0.2+(gendist(p/570,570,1))*.2
+%%
 Kf=R;
 tau1=.1;
 tau2=.1;
@@ -38,7 +41,7 @@ h=2.5;
 rosc=1;
 
 
-dh=SimuInfo.Ts;
+dh=0.0001;
 
 s1=0;%osimModel.getMuscles().get('ECRL').getActivation(osimState); %activation
 s2=0;%osimModel.getMuscles().get('FCU').getActivation(osimState);%activation

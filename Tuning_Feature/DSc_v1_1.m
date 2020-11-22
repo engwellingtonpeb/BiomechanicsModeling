@@ -64,6 +64,10 @@ SimuInfo.Ck=Ck;
 SimuInfo.Dk=Dk;
 SimuInfo.Saturation=1;
 SimuInfo.Ni=CostParam.Ni;
+pd = makedist('Uniform','lower',1,'upper',length(OscillatorParam.P));
+SimuInfo.pd=pd;
+
+
 
 [SimuInfo]=BiomechModelTunning(OscillatorParam, CostParam, OptimizationAlgorithm,SimuInfo)
 

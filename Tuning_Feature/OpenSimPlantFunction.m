@@ -71,8 +71,9 @@ function [x_dot, controlValues] = OpenSimPlantFunction(t, x,controlsFuncHandle, 
     % Update state with current values  
     osimState.setTime(t);
     numVar = osimState.getNY();
+    UpdVar=osimState.updY();
     for i = 0:1:numVar-1
-        osimState.updY().set(i, x(i+1,1));
+        UpdVar.set(i, x(i+1,1));
     end
     
     %osimModel.getVisualizer().show(osimState);
@@ -91,7 +92,7 @@ function [x_dot, controlValues] = OpenSimPlantFunction(t, x,controlsFuncHandle, 
            controlValues(1) = controlVector.get(i-1);
        end
     end
-    
+%     
     % Update the derivative calculations in the State Variable
   
     osimModel.computeStateVariableDerivatives(osimState);
@@ -99,8 +100,9 @@ function [x_dot, controlValues] = OpenSimPlantFunction(t, x,controlsFuncHandle, 
     
     x_dot = zeros(numVar,1);
     % Set output variable to new state
+    derivatives=osimState.getYDot();
     for i = 0:1:numVar-1
-        x_dot(i+1,1) = osimState.getYDot().get(i);
+        x_dot(i+1,1) = derivatives.get(i);
     
     end
     

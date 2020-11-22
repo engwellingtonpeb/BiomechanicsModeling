@@ -20,10 +20,8 @@ if (strcmp(OptimizationAlgorithm.technique,'ga'))
     b=[];
     Aeq = [];
     beq = [];
-    lb = [];
-    ub = [];
     lb = [0 0 0 0];
-    ub = [1.5 1.5 1.5 1.5];
+    ub = [2 2 2 2];
     % ConstraintFunction = @gaConstrain;
     ConstraintFunction=[]
     % %options=[];
