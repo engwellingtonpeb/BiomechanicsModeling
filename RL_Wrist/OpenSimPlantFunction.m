@@ -1,24 +1,3 @@
-% ----------------------------------------------------------------------- 
-% The OpenSim API is a toolkit for musculoskeletal modeling and           
-% simulation. See http://opensim.stanford.edu and the NOTICE file         
-% for more information. OpenSim is developed at Stanford University       
-% and supported by the US National Institutes of Health (U54 GM072970,    
-% R24 HD065690) and by DARPA through the Warrior Web program.             
-%                                                                         
-% Copyright (c) 2005-2013 Stanford University and the Authors             
-% Author(s): Daniel A. Jacobs                                             
-%                                                                         
-% Licensed under the Apache License, Version 2.0 (the "License");         
-% you may not use this file except in compliance with the License.        
-% You may obtain a copy of the License at                                 
-% http://www.apache.org/licenses/LICENSE-2.0.                             
-%                                                                         
-% Unless required by applicable law or agreed to in writing, software     
-% distributed under the License is distributed on an "AS IS" BASIS,       
-% WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or         
-% implied. See the License for the specific language governing            
-% permissions and limitations under the License.                          
-% ----------------------------------------------------------------------- 
 %OpenSimPlantFunction  
 %   x_dot = OpenSimPlantFunction(t, x, controlsFuncHandle, osimModel, 
 %   osimState) converts an OpenSimModel and an OpenSimState into a 
@@ -36,9 +15,10 @@
 % Output:
 %   x_dot is a Matlab column matrix of the derivative of the state values
 % ----------------------------------------------------------------------- 
-function [x_dot, controlValues] = OpenSimPlantFunction(t, x,controlsFuncHandle, osimModel, ...
+function [x_dot, controlValues] = OpenSimPlantFunction(t, x, osimModel, ...
     osimState,SimuInfo)
     % Error Checking
+    import org.opensim.modeling.*
     if(~isa(osimModel, 'org.opensim.modeling.Model'))
         error('OpenSimPlantFunction:InvalidArgument', [...
             '\tError in OpenSimPlantFunction\n',...
@@ -71,27 +51,25 @@ function [x_dot, controlValues] = OpenSimPlantFunction(t, x,controlsFuncHandle, 
     % Update state with current values  
     osimState.setTime(t);
     numVar = osimState.getNY();
+    UpdVar=osimState.updY();
     for i = 0:1:numVar-1
-        osimState.updY().set(i, x(i+1,1));
+        UpdVar.set(i, x(i+1,1));
     end
     
     %osimModel.getVisualizer().show(osimState);
     % Update the state velocity calculations
     osimModel.computeStateVariableDerivatives(osimState);
    
-    
-    
-
-    
+        
     % Update model with control values
-    if(~isempty(controlsFuncHandle))
-       controlVector = controlsFuncHandle(osimModel,osimState,t,SimuInfo);
+    %if(isempty(controlsFuncHandle))
+       controlVector = OpenSimPlantControlsFunction_control(osimModel,osimState,t,SimuInfo);
        osimModel.setControls(osimState, controlVector);
        for i = 1:osimModel.getNumControls()
            controlValues(1) = controlVector.get(i-1);
        end
-    end
-    
+    %end
+%     
     % Update the derivative calculations in the State Variable
   
     osimModel.computeStateVariableDerivatives(osimState);
@@ -99,8 +77,9 @@ function [x_dot, controlValues] = OpenSimPlantFunction(t, x,controlsFuncHandle, 
     
     x_dot = zeros(numVar,1);
     % Set output variable to new state
+    derivatives=osimState.getYDot();
     for i = 0:1:numVar-1
-        x_dot(i+1,1) = osimState.getYDot().get(i);
+        x_dot(i+1,1) = derivatives.get(i);
     
     end
     
