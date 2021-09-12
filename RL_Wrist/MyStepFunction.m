@@ -6,7 +6,7 @@ persistent ErrorVec
 persistent ErrorInt
 persistent u
 Ts=SimuInfo.Ts;
-t=n*Ts
+t=n*Ts;
 
 global States
 
@@ -66,7 +66,7 @@ reU=u(1,:)*Q*u(1,:)';
 r=re+reInt+reU;
 
 % Reward
-if (abs(Error)>=12 && t<=1.5)||(abs(Error)>=3 && t>1.5)
+if (abs(Error)>=15 && t<=1.5)||(abs(Error)>=3 && t>1.5)
     Reward = r-((1/t)*1e3);
     IsDone=1;
     episode=episode+1;

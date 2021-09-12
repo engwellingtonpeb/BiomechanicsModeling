@@ -100,4 +100,5 @@ InitialObservation = [-10;0;0];
 
 
 close all
+episode
 end

@@ -65,35 +65,32 @@ uFCU.set(0,SimuInfo.Action(2));
 
 
     
-    
+%     persistent j
+% if (t==0)
+%     j=0;
+% else
+% 
+%   if (rem(j,10)==0)
+% 
+% 
+%     subplot(2,1,1)
+%     plot(t,phi_ref,'go',t,phi,'r.')
+%     axis([t-3 t -20 30])
+%     drawnow;
+%     grid on;
+%     hold on;
 %     
-    persistent j
-if (t==0)
-    j=0;
-else
-
-
-  if (rem(j,1000)==0)
-
-
-    subplot(2,1,1)
-    plot(t,phi_ref,'go',t,phi,'r.')
-    axis([t-3 t -20 30])
-    drawnow;
-    grid on;
-    hold on;
-    
-   
-    subplot(2,1,2)
-    plot(t,SimuInfo.Action(1),'b.',t,SimuInfo.Action(2),'r.')
-    axis([t-3 t -1 1])
-    drawnow;
-    grid on;
-    hold on;
-
-
-
-  end
- j=j+1;    
+%    
+%     subplot(2,1,2)
+%     plot(t,SimuInfo.Action(1),'b.',t,SimuInfo.Action(2),'r.')
+%     axis([t-3 t -1 1])
+%     drawnow;
+%     grid on;
+%     hold on;
+% 
+% 
+% 
+%   end
+%  j=j+1;    
   
 end

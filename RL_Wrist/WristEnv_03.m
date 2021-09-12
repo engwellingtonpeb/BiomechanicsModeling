@@ -18,7 +18,7 @@ clc
 SimuInfo=struct
 
 % episode time
-SimuInfo.Ts=.0001;
+SimuInfo.Ts=.001;
 SimuInfo.Tend=7;
 global n;
 n=0;
@@ -142,7 +142,7 @@ actInfo =getActionInfo(env);
 numAct = actInfo.Dimension(1);
 
 %CRITIC NETWORK
-L = 30; % number of neurons
+L = 5; % number of neurons
 statePath = [
     featureInputLayer(3,'Normalization','none','Name','observation')
     fullyConnectedLayer(L,'Name','fc1')
@@ -165,7 +165,7 @@ criticNetwork = connectLayers(criticNetwork,'fc5','add/in2');
 
 plot(criticNetwork)
 
-criticOptions = rlRepresentationOptions('LearnRate',1e-1,'GradientThreshold',1,'L2RegularizationFactor',1e-4,'UseDevice',"gpu");
+criticOptions = rlRepresentationOptions('LearnRate',1e-3,'GradientThreshold',1,'L2RegularizationFactor',1e-4,'UseDevice',"gpu");
 
 critic = rlQValueRepresentation(criticNetwork,obsInfo,actInfo,...
     'Observation',{'observation'},'Action',{'action'},criticOptions);
@@ -187,7 +187,7 @@ actorNetwork = [
 
 
 
-actorOptions = rlRepresentationOptions('LearnRate',.5,'GradientThreshold',1,'L2RegularizationFactor',1e-4,'UseDevice',"gpu");
+actorOptions = rlRepresentationOptions('LearnRate',1e-3,'GradientThreshold',1,'L2RegularizationFactor',1e-4,'UseDevice',"gpu");
 actor = rlDeterministicActorRepresentation(actorNetwork,obsInfo,actInfo,...
     'Observation',{'observation'},'Action',{'ActorScaling1'},actorOptions);
 
@@ -212,7 +212,7 @@ agent = rlDDPGAgent(actor,critic,agentOpts);
 
 
 
-
+% load('Agent109.mat')
 %% Treinamento
 
 % training the agent 
@@ -224,7 +224,10 @@ trainOpts = rlTrainingOptions(...
     'Plots','training-progress',...
     'StopTrainingCriteria','AverageReward',...
     'StopTrainingValue',66e6,...
-    'UseParallel',1);
+    'UseParallel',0,...
+    'SaveAgentCriteria',"EpisodeReward",...
+    'SaveAgentValue',1e5,...
+    'SaveAgentDirectory', pwd + "\Agents");
 
 trainingStats = train(agent,env,trainOpts);
 
@@ -232,5 +235,5 @@ trainingStats = train(agent,env,trainOpts);
 
 
 %%
-simOptions = rlSimulationOptions('MaxSteps',20000);
+simOptions = rlSimulationOptions('MaxSteps',200000);
 experience = sim(env,agent,simOptions);
