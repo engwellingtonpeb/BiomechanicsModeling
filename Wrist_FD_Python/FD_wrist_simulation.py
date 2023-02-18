@@ -6,7 +6,7 @@ Author: Wellington Pinheiro, MSc.
 Advisor: Luciano Menegaldo, PhD.
 
 This script runs a basic forward dynamics openloop simulation of wrist movement
-it uses opensim integrators.
+it uses opensim integrators. Test18/02
 '''
 
 import opensim as osim
