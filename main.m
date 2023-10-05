@@ -4,7 +4,7 @@
 %                                                                         %
 %  Author: Wellington Cássio Pinheiro - MsC Requirement                   %
 %  Advisor: Luciano Luporini Menegaldo                                    %         
-%  Date:01/11/20                                                      %
+%  Date:01/11/20                                                          %
 %-------------------------------------------------------------------------%
 %                                                                         %
 % 1) This code run a OpenSim forward dynamics simulation to produce a     %

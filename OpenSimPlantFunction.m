@@ -62,11 +62,7 @@ function [x_dot, controlValues] = OpenSimPlantFunction(t, x,controlsFuncHandle, 
             '\tThe argument x is not the same size as the state vector.',...
             'It should have %d rows.'], osimState.getY().size());
     end
-%     if(~isa(controlsFunc, 'function_handle'))
-%        error('OpenSimPlantFunction:InvalidArgument', [...
-%             '\tError in OpenSimPlantFunction\n',...
-%             '\tcontrolsFunc is not a valid function handle.']); 
-%     end
+
     
     % Check size of controls
 

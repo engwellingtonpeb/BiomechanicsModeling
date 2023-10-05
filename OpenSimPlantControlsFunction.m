@@ -15,7 +15,7 @@
 % -----------------------------------------------------------------------
 function modelControls = OpenSimPlantControlsFunction(osimModel, osimState,t,SimuInfo)
     % Load Library
-    import org.opensim.modeling.*;
+    %import org.opensim.modeling.*;
     
     
     % Check Size
