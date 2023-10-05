@@ -22,7 +22,7 @@
 % -----------------------------------------------------------------------
 function modelControls = OsimControlsFcn(osimModel, osimState,t,SimuInfo)
     % Load Library
-    import org.opensim.modeling.*;
+    %import org.opensim.modeling.*;
     
     
     % Check Size
@@ -71,9 +71,9 @@ psi_ref=deg2rad(SimuInfo.Setpoint(2));
 phi=osimState.getY().get(17); % wrist flexion angle (rad)
 psi=osimState.getY().get(15); % pro_sup angle (rad)
 
-err_pos=[phi_ref-phi ; psi_ref-psi];
+ERR_POS=[phi_ref-phi ; psi_ref-psi];
 
-ERR_POS=[err_pos];
+%ERR_POS=[err_pos];
 
 
 %% Control Signal Generation    
@@ -156,35 +156,35 @@ end
  
 
     %% ============  REAL TIME PLOT ===============
-%     persistent j
-% if (t==0)
-%     j=0;
-% else
-% 
-% 
-%  if (rem(j,700)==0)
-% 
-%     t
-%     subplot(4,1,1)
-%     plot(t,rad2deg(phi_ref),'go',t,rad2deg(phi),'r.')
-%     axis([t-3 t -40 40])
-%     drawnow;
-%     grid on;
-%     hold on;
-%     
-%     subplot(4,1,2)
-%     plot(t,rad2deg(psi_ref),'go',t,rad2deg(psi),'k.')
-%     axis([t-3 t 50 100])
-%     drawnow;
-%     grid on;
-%     hold on;
-%     
-%     subplot(4,1,3)
-%     plot(t,u(1),'b.',t,u(2),'r.')
-%     axis([t-3 t -1 1])
-%     drawnow;
-%     grid on;
-%     hold on;
+    persistent j
+if (t==0)
+    j=0;
+else
+
+
+ if (rem(j,700)==0)
+
+    t
+    subplot(4,1,1)
+    plot(t,rad2deg(phi_ref),'go',t,rad2deg(phi),'r.')
+    axis([t-3 t -40 40])
+    drawnow;
+    grid on;
+    hold on;
+    
+    subplot(4,1,2)
+    plot(t,rad2deg(psi_ref),'go',t,rad2deg(psi),'k.')
+    axis([t-3 t 50 100])
+    drawnow;
+    grid on;
+    hold on;
+    
+    subplot(4,1,3)
+    plot(t,u(1),'b.',t,u(2),'r.')
+    axis([t-3 t -1 1])
+    drawnow;
+    grid on;
+    hold on;
 % 
 % %     subplot(4,1,3)
 % %     plot(t,Y1(1,end),'b.',t,Y1(2,end),'r.')
@@ -208,8 +208,8 @@ end
 % %     hold on;
 % 
 % 
-%  end
-%  j=j+1;
+ end
+ j=j+1;
 end
 
 

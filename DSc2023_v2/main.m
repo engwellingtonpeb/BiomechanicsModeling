@@ -8,7 +8,7 @@
 %-------------------------------------------------------------------------%
 
 clc
-clear all
+clear
 close all hidden
 
 import org.opensim.modeling.*
@@ -17,11 +17,11 @@ import org.opensim.modeling.*
 %close all
 run=true;
 
-SimuInfo=struct %information about simulation parameters
+SimuInfo=struct; %information about simulation parameters
 MotionValida=struct;
 MotionValida.data=[];
 
-SimuInfo.Tend=10;
+SimuInfo.Tend=.5;
     
 
 clearvars -except SimuInfo k
@@ -41,7 +41,7 @@ end
 
 %         SimuInfo.Kz=Kz;
 SimuInfo.Ts=1e-4;
-SimuInfo.Kz=c2d(K,1e-4)
+SimuInfo.Kz=c2d(K,1e-4);
 
 [Ak,Bk,Ck,Dk]=ssdata(SimuInfo.Kz);
 
@@ -166,15 +166,14 @@ Tend=SimuInfo.Tend;
 %Integrate plant using Matlab Integrator
 SimuInfo.timeSpan = [0:Ts:Tend];
 integratorName = 'ode1'; %fixed step Dormand-Prince method of order 5
-integratorOptions = odeset('RelTol', 1e-2, 'AbsTol', 1e-2, 'MaxStep', 1e-3)
+integratorOptions = odeset('RelTol', 1e-1, 'AbsTol', 1e-2, 'MaxStep', 1e-4);
 SimuInfo.osimplot=true;
 
 %% Run Simulation
 % set(gcf, 'color', 'white');
 
 tic
-       motionData = IntegrateOsimPlant(osimModel, controlsFuncHandle, ...
-        integratorName,SimuInfo,integratorOptions)
+       motionData = IntegrateOsimPlant(osimModel,integratorName,SimuInfo,integratorOptions);
        
 elapsedTime=toc
 
@@ -187,7 +186,7 @@ date=strrep(date,'/','_');
 
 indir=pwd;
 indir=strcat(indir,'\simulations');
-filename=strcat(date,'_DScQuali')
+filename=strcat(date,'_DScQuali');
 extension='.mat';
 motionFilename=fullfile(indir,[filename extension]);
 

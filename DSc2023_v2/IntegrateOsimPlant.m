@@ -51,26 +51,25 @@
 % outputDataStructure = IntegrateOpenSimPlant(osimModel, osimState, ...
 % timeSpan, integratorName, integratorOptions);
 % -----------------------------------------------------------------------
-function OutputData = IntegrateOsimPlant(osimModel, controlsFuncHandle,...
-     integratorName,SimuInfo, integratorOptions)
+function OutputData = IntegrateOsimPlant(osimModel, integratorName,SimuInfo, integratorOptions)
     
     % Import Java libraries
     %import org.opensim.modeling.*;
     
 
     
-    if(~isa(osimModel, 'org.opensim.modeling.Model'))
-        error('IntegrateOpenSimPlant:InvalidArgument', [ ...
-            '\tError in IntegrateOpenSimPlant\n', ...
-            '\tArgument osimModel is not an org.opensim.modeling.Model.']);
-    end
-    if(~isempty(controlsFuncHandle))
-        if(~isa(controlsFuncHandle, 'function_handle'))
-            controlsFuncHandle = [];
-            display('controlsFuncHandle was not a valid function_handle');
-            display('No controls will be used.');
-        end
-    end
+%     if(~isa(osimModel, 'org.opensim.modeling.Model'))
+%         error('IntegrateOpenSimPlant:InvalidArgument', [ ...
+%             '\tError in IntegrateOpenSimPlant\n', ...
+%             '\tArgument osimModel is not an org.opensim.modeling.Model.']);
+%     end
+%     if(~isempty(controlsFuncHandle))
+%         if(~isa(controlsFuncHandle, 'function_handle'))
+%             controlsFuncHandle = [];
+%             disp('controlsFuncHandle was not a valid function_handle');
+%             disp('No controls will be used.');
+%         end
+%     end
 
     % Check to see if model state is initialized by checking size
     if(osimModel.getWorkingState().getNY() == 0)
@@ -89,19 +88,18 @@ function OutputData = IntegrateOsimPlant(osimModel, controlsFuncHandle,...
     % Create a anonymous handle to the OpenSim plant function.  The 
     % variables osimModel and osimState are held in the workspace and 
     % passed as arguments
-    plantHandle = @(t,x) OsimPlantFcn(t, x, controlsFuncHandle, osimModel, osimState, SimuInfo);
+    plantHandle = @(t,x) OsimPlantFcn(t, x, osimModel, osimState, SimuInfo);
 
     % Integrate the system equations
     integratorFunc = str2func(integratorName);
     
-    y0gpu=gpuArray(InitStates)
+
 
 
     if strcmp(integratorName,'ode113')
         [T,Y] = integratorFunc(plantHandle, [0, SimuInfo.Tend], InitStates, integratorOptions);%,
     else
-        %[Y] = integratorFunc(plantHandle, SimuInfo.timeSpan, InitStates);
-        [Y] = arrayfun(integratorFunc(plantHandle, SimuInfo.timeSpan, y0gpu));
+        [Y] = integratorFunc(plantHandle, SimuInfo.timeSpan, InitStates);
         T=SimuInfo.timeSpan';
     end
     

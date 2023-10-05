@@ -36,7 +36,7 @@
 % Output:
 %   x_dot is a Matlab column matrix of the derivative of the state values
 % ----------------------------------------------------------------------- 
-function [x_dot, controlValues] = OsimPlantFcn(t, x,controlsFuncHandle, osimModel, ...
+function [x_dot] = OsimPlantFcn(t, x, osimModel, ...
     osimState,SimuInfo)
 
 
