@@ -51,7 +51,7 @@
 % outputDataStructure = IntegrateOpenSimPlant(osimModel, osimState, ...
 % timeSpan, integratorName, integratorOptions);
 % -----------------------------------------------------------------------
-function OutputData = IntegrateOsimPlant(osimModel, integratorName,SimuInfo, integratorOptions)
+function OutputData = IntegrateOsimPlant(osimModel, integratorName, SimuInfo, integratorOptions)
     
     % Import Java libraries
     %import org.opensim.modeling.*;
@@ -85,9 +85,7 @@ function OutputData = IntegrateOsimPlant(osimModel, integratorName,SimuInfo, int
         InitStates(i+1,1) = osimState.getY().get(i); 
     end
 
-    % Create a anonymous handle to the OpenSim plant function.  The 
-    % variables osimModel and osimState are held in the workspace and 
-    % passed as arguments
+    % Create a anonymous handle to the OpenSim plant function.
     plantHandle = @(t,x) OsimPlantFcn(t, x, osimModel, osimState, SimuInfo);
 
     % Integrate the system equations
@@ -119,10 +117,5 @@ function OutputData = IntegrateOsimPlant(osimModel, integratorName,SimuInfo, int
     
     OutputData.data = [T, Y];
     
-%     if strcmp(integratorName,'ode1')
-%         OutputData.data = [timeSpan, Y];
-%     else
-%         %Y=reshape(Y,T,54);
-%         OutputData.data = [T, Y];
-%     end
+
 end

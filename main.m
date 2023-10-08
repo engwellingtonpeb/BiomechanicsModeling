@@ -393,7 +393,7 @@ while(SimuInfo.ControlTest)
         end
         
 %         SimuInfo.Kz=Kz;
-        SimuInfo.Ts=1e-4;
+        SimuInfo.Ts=1e-3;
         SimuInfo.Kz=c2d(K,1e-4)
         
         [Ak,Bk,Ck,Dk]=ssdata(SimuInfo.Kz);

@@ -48,9 +48,8 @@ end
 neq = length(y0);
 N = length(tspan);
 Y = zeros(neq,N);
-
 Y(:,1) = y0;
 for i = 1:N-1 
-  Y(:,i+1) = Y(:,i) + h(i)*feval(odefun,tspan(i),Y(:,i),varargin{:});
+    Y(:,i+1) = Y(:,i) + h(i)*feval(odefun,tspan(i),Y(:,i),varargin{:});
 end
 Y = Y.';

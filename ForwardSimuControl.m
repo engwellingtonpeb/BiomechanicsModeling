@@ -95,7 +95,7 @@ osimState.getY.set(52,0); %zera ativacao inicial SUP
 
 
 %% Prep Simulation
-%stateDerivVector = osimModel.computeStateVariableDerivatives(osimState);
+osimModel.computeStateVariableDerivatives(osimState);
 osimModel.equilibrateMuscles(osimState); %solve for equilibrium similiar
 
 %Controls function

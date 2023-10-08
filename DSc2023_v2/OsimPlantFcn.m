@@ -36,9 +36,9 @@
 % Output:
 %   x_dot is a Matlab column matrix of the derivative of the state values
 % ----------------------------------------------------------------------- 
-function [x_dot] = OsimPlantFcn(t, x, osimModel, ...
-    osimState,SimuInfo)
+function [x_dot] = OsimPlantFcn(t, x, osimModel, osimState,SimuInfo)
 
+%import org.opensim.modeling.*;
 
     % Error Checking
 %     if(~isa(osimModel, 'org.opensim.modeling.Model'))
@@ -64,7 +64,6 @@ function [x_dot] = OsimPlantFcn(t, x, osimModel, ...
 %     end
 
 
-    
     % Update state with current values  
     osimState.setTime(t);
     numVar = SimuInfo.Nstates;
@@ -74,23 +73,27 @@ function [x_dot] = OsimPlantFcn(t, x, osimModel, ...
     end
     
 
-
     %Update the derivative calculations in the State Variable
     osimModel.computeStateVariableDerivatives(osimState);
-    
+
+
+
     % Update model with control values
 
     u = OsimControlsFcn(osimModel,osimState,t,SimuInfo); %control effort
-
     osimModel.setControls(osimState, u);
-    
-    
+
+  
+   
+   
     %Update the derivative calculations in the State Variable
     osimModel.computeStateVariableDerivatives(osimState);
-    
-    
-    x_dot=osimState.getYDot().getAsMat();
-    
+
+     x_dot=osimState.getYDot().getAsMat();
+
+%     osimModel.equilibrateMuscles(osimState);
+
+
 
 
 end

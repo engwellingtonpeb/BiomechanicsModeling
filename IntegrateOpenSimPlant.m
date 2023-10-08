@@ -89,7 +89,7 @@ function OutputData = IntegrateOpenSimPlant(osimModel, controlsFuncHandle,...
     % Create a anonymous handle to the OpenSim plant function.  The 
     % variables osimModel and osimState are held in the workspace and 
     % passed as arguments
-    plantHandle = @(t,x) OsimPlantFcn(t, x, controlsFuncHandle, osimModel, osimState, SimuInfo);
+    plantHandle = @(t,x) OpenSimPlantFunction(t, x, controlsFuncHandle, osimModel, osimState, SimuInfo);
 
     % Integrate the system equations
     integratorFunc = str2func(integratorName);

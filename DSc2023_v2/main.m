@@ -21,8 +21,8 @@ SimuInfo=struct; %information about simulation parameters
 MotionValida=struct;
 MotionValida.data=[];
 
-SimuInfo.Tend=.5;
-    
+SimuInfo.Tend=10;
+SimuInfo.Ts=1e-3;
 
 clearvars -except SimuInfo k
 
@@ -39,9 +39,7 @@ for i=1:N
   P(i)=random(X,1,1);
 end
 
-%         SimuInfo.Kz=Kz;
-SimuInfo.Ts=1e-4;
-SimuInfo.Kz=c2d(K,1e-4);
+SimuInfo.Kz=c2d(K,SimuInfo.Ts);
 
 [Ak,Bk,Ck,Dk]=ssdata(SimuInfo.Kz);
 
@@ -57,13 +55,12 @@ SimuInfo.pd=pd;
 
 
 PhiRef=0;%makedist('Normal','mu',0,'sigma',4);
-PsiRef=80;%makedist('Normal','mu',60,'sigma',0);
+PsiRef=70;%makedist('Normal','mu',60,'sigma',0);
 
 SimuInfo.Setpoint=[ PhiRef, PsiRef];
 
-
-osimModel=Model('.\ModelFiles\MoBL_ARMS_module2_4_allmuscles.osim');
-
+osimModel=Model('.\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim');
+%osimModel=Model('.\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Model\4.1\MOBL_ARMS_fixed_41.osim');
 %osimModel.setUseVisualizer(true);
 
 osimState=osimModel.initSystem();
@@ -120,7 +117,7 @@ SimuInfo.Coord_all=Coord_all;
 
 
 editableCoordSet = osimModel.updCoordinateSet();
-editableCoordSet.get('elv_angle').setValue(osimState, 0);
+editableCoordSet.get('elv_angle').setValue(osimState, deg2rad(60));
 editableCoordSet.get('elv_angle').setLocked(osimState, true);
 
 editableCoordSet.get('shoulder_elv').setValue(osimState, 0);
@@ -129,8 +126,8 @@ editableCoordSet.get('shoulder_elv').setLocked(osimState, true);
 editableCoordSet.get('shoulder_rot').setValue(osimState, 0);
 editableCoordSet.get('shoulder_rot').setLocked(osimState, true);
 
-% editableCoordSet.get('elbow_flexion').setValue(osimState, deg2rad(30));
-% editableCoordSet.get('elbow_flexion').setLocked(osimState, true);
+editableCoordSet.get('elbow_flexion').setValue(osimState, deg2rad(90));
+editableCoordSet.get('elbow_flexion').setLocked(osimState, true);
 
 %editableCoordSet.get('pro_sup').setValue(osimState, deg2rad(psini(SimuInfo.index)));
 editableCoordSet.get('pro_sup').setValue(osimState, deg2rad(80));
@@ -144,27 +141,25 @@ editableCoordSet.get('flexion').setValue(osimState, deg2rad(-10));
 editableCoordSet.get('flexion').setLocked(osimState, false);
 
 
-osimState.getY.set(40,0); %zera ativacao inicial ECRL
-osimState.getY.set(42,0); %zera ativacao inicial ECRB
-osimState.getY.set(44,0); %zera ativacao inicial ECU
-osimState.getY.set(46,0); %zera ativacao inicial FCR
-osimState.getY.set(48,0); %zera ativacao inicial FCU
-osimState.getY.set(50,0); %zera ativacao inicial PQ
-osimState.getY.set(52,0); %zera ativacao inicial SUP
+% osimState.getY.set(41,0); %zera ativacao inicial ECRL
+% osimState.getY.set(43,0); %zera ativacao inicial ECRB
+% osimState.getY.set(45,0); %zera ativacao inicial ECU
+% osimState.getY.set(47,0); %zera ativacao inicial FCR
+% osimState.getY.set(49,0); %zera ativacao inicial FCU
+% osimState.getY.set(51,0); %zera ativacao inicial PQ
+% osimState.getY.set(53,0); %zera ativacao inicial SUP
 
 
 
 %% Prep Simulation
-%stateDerivVector = osimModel.computeStateVariableDerivatives(osimState);
+osimModel.computeStateVariableDerivatives(osimState);
 osimModel.equilibrateMuscles(osimState); %solve for equilibrium similiar
 
 %Controls function
 controlsFuncHandle = @OsimControlsFcn;
-Ts=SimuInfo.Ts;
-Tend=SimuInfo.Tend;
 
 %Integrate plant using Matlab Integrator
-SimuInfo.timeSpan = [0:Ts:Tend];
+SimuInfo.timeSpan = [0:SimuInfo.Ts:SimuInfo.Tend];
 integratorName = 'ode1'; %fixed step Dormand-Prince method of order 5
 integratorOptions = odeset('RelTol', 1e-1, 'AbsTol', 1e-2, 'MaxStep', 1e-4);
 SimuInfo.osimplot=true;
