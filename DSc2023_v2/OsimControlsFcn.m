@@ -89,11 +89,17 @@ ALPHA4=(-0.5*((exp(eps_psi)-exp(-eps_psi))/((exp(eps_psi))+exp(-eps_psi))))+0.5;
 %  if t<1
 
 
-    u1=ALPHA1*(u(1));       %ECRL
-    u2=ALPHA2*(0.1*u(2));   %FCU
-    u3=ALPHA3*(u(3));       %PQ
-    u4=ALPHA4*(0.5*u(4));   %SUP
-% 
+%     u1=ALPHA1*(u(1));       %ECRL
+%     u2=ALPHA2*(0.1*u(2));   %FCU
+%     u3=ALPHA3*(u(3));       %PQ
+%     u4=ALPHA4*(0.5*u(4));   %SUP
+
+
+    u1=ALPHA1*(2*u(1)); %ECRL
+    u2=ALPHA2*(0.4*u(2)); %FCU
+    u3=ALPHA3*(1.5*u(3)); %PQ
+    u4=ALPHA4*(0.5*u(4)); %SUP
+
 %  else 
 % 
 %     
@@ -120,10 +126,6 @@ end
 
  
 %% Update modelControls with the new values
-%     osimModel.updActuators().get('ECRL').addInControls(uECRL, modelControls);
-%     osimModel.updActuators().get('FCU').addInControls(uFCU, modelControls);
-%     osimModel.updActuators().get('PQ').addInControls(uPQ, modelControls);
-%     osimModel.updActuators().get('SUP').addInControls(uSUP, modelControls);
     osimModel.updControls(osimState).set(1,u(1)); %ECRL
     osimModel.updControls(osimState).set(5,u(2)); %FCU
     osimModel.updControls(osimState).set(6,u(3)); %PQ
@@ -132,45 +134,45 @@ end
 
 
     %% ============  REAL TIME PLOT ===============
-% persistent j
-% if (t==0)
-%     j=0;
-% else
-% 
-% 
-%  if (rem(j,100)==0)
-% 
-%     t
-%     subplot(4,1,1)
-%     plot(t,rad2deg(phi_ref),'go',t,rad2deg(phi),'r.')
-%     axis([t-3 t -40 60])
-%     drawnow;
-%     grid on;
-%     hold on;
-%     
-%     subplot(4,1,2)
-%     plot(t,rad2deg(psi_ref),'go',t,rad2deg(psi),'k.')
-%     axis([t-3 t 40 100])
-%     drawnow;
-%     grid on;
-%     hold on;
-%     
-%     subplot(4,1,3)
-%     plot(t,u(1),'b.',t,u(2),'r.')
-%     axis([t-3 t -1 1])
-%     drawnow;
-%     grid on;
-%     hold on;
-% 
-%     subplot(4,1,4)
-%     plot(t,u(3),'b.',t,u(4),'r.')
-%     axis([t-3 t -1 1])
-%     drawnow;
-%     grid on;
-%     hold on;
-% 
-%  end
-%  j=j+1;
+persistent j
+if (t==0)
+    j=0;
+else
+
+
+ if (rem(j,50)==0)
+
+    t
+    subplot(4,1,1)
+    plot(t,rad2deg(phi_ref),'go',t,rad2deg(phi),'r.')
+    axis([t-3 t -40 60])
+    drawnow;
+    grid on;
+    hold on;
+    
+    subplot(4,1,2)
+    plot(t,rad2deg(psi_ref),'go',t,rad2deg(psi),'k.')
+    axis([t-3 t 40 100])
+    drawnow;
+    grid on;
+    hold on;
+    
+    subplot(4,1,3)
+    plot(t,u(1),'b.',t,u(2),'r.')
+    axis([t-3 t -1 1])
+    drawnow;
+    grid on;
+    hold on;
+
+    subplot(4,1,4)
+    plot(t,u(3),'b.',t,u(4),'r.')
+    axis([t-3 t -1 1])
+    drawnow;
+    grid on;
+    hold on;
+
+ end
+ j=j+1;
 end
 
 

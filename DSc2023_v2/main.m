@@ -141,13 +141,13 @@ editableCoordSet.get('flexion').setValue(osimState, deg2rad(-10));
 editableCoordSet.get('flexion').setLocked(osimState, false);
 
 
-% osimState.getY.set(41,0); %zera ativacao inicial ECRL
-% osimState.getY.set(43,0); %zera ativacao inicial ECRB
-% osimState.getY.set(45,0); %zera ativacao inicial ECU
-% osimState.getY.set(47,0); %zera ativacao inicial FCR
-% osimState.getY.set(49,0); %zera ativacao inicial FCU
-% osimState.getY.set(51,0); %zera ativacao inicial PQ
-% osimState.getY.set(53,0); %zera ativacao inicial SUP
+osimState.getY.set(41,0); %zera ativacao inicial ECRL
+osimState.getY.set(43,0); %zera ativacao inicial ECRB
+osimState.getY.set(45,0); %zera ativacao inicial ECU
+osimState.getY.set(47,0); %zera ativacao inicial FCR
+osimState.getY.set(49,0); %zera ativacao inicial FCU
+osimState.getY.set(51,0); %zera ativacao inicial PQ
+osimState.getY.set(53,0); %zera ativacao inicial SUP
 
 
 
