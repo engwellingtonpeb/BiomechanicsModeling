@@ -1,10 +1,11 @@
 %-------------------------------------------------------------------------%
 %                  Federal University of Rio de Janeiro                   %
-%                  Department of Biomedical Engineering                   %
+%                 Biomedical Engineering Program - COPPE                  %
 %                                                                         %
-%  Author: Wellington Cássio Pinheiro, MSc. - DSc Requirement             %
-%  Advisor: Luciano Luporini Menegaldo, DSc.                              %         
-%  Date:04/10/2023                                                        %
+%  Author: Wellington Cássio Pinheiro, MSc.                               %
+%  Advisor: Luciano Luporini Menegaldo                                    %         
+%  Date: 04/10/2023                                                       %
+%  Last Update: DSc - Version 2.0                                         %
 %-------------------------------------------------------------------------%
 
 clc
@@ -12,21 +13,21 @@ clear
 close all hidden
 
 import org.opensim.modeling.*
-
-
-%close all
-run=true;
+load('26_Nov_2018_08_43_40_A0075_F50_ControllerDiscrete.mat')
 
 SimuInfo=struct; %information about simulation parameters
-MotionValida=struct;
-MotionValida.data=[];
 
-SimuInfo.Tend=10;
+SimuInfo.Tend=15;
 SimuInfo.Ts=1e-3;
+SimuInfo.SimulationGoal='idtf'; %[ idtf, validation, tune, simulation.. etc] 
 
-clearvars -except SimuInfo k
+%Config Simulations using Matlab Integrator
+SimuInfo.timeSpan = [0:SimuInfo.Ts:SimuInfo.Tend];
+integratorName = 'ode1'; %fixed step Dormand-Prince method of order 5
+integratorOptions = odeset('RelTol', 1e-1, 'AbsTol', 1e-2, 'MaxStep', 1e-4);
 
-load('26_Nov_2018_08_43_40_A0075_F50_ControllerDiscrete.mat')
+
+
 
 %Distribuição de um paciente especíico
 %load('distrib_tremor_paciente01.mat') % paciente
@@ -53,15 +54,13 @@ pd = makedist('Uniform','lower',1,'upper',length(P));
 SimuInfo.pd=pd;
 
 
-
 PhiRef=0;%makedist('Normal','mu',0,'sigma',4);
-PsiRef=70;%makedist('Normal','mu',60,'sigma',0);
+PsiRef=20;%makedist('Normal','mu',60,'sigma',0);
 
 SimuInfo.Setpoint=[ PhiRef, PsiRef];
 
 osimModel=Model('.\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim');
-%osimModel=Model('.\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Model\4.1\MOBL_ARMS_fixed_41.osim');
-%osimModel.setUseVisualizer(true);
+
 
 osimState=osimModel.initSystem();
 
@@ -141,13 +140,13 @@ editableCoordSet.get('flexion').setValue(osimState, deg2rad(-10));
 editableCoordSet.get('flexion').setLocked(osimState, false);
 
 
-osimState.getY.set(41,0); %zera ativacao inicial ECRL
-osimState.getY.set(43,0); %zera ativacao inicial ECRB
-osimState.getY.set(45,0); %zera ativacao inicial ECU
-osimState.getY.set(47,0); %zera ativacao inicial FCR
-osimState.getY.set(49,0); %zera ativacao inicial FCU
-osimState.getY.set(51,0); %zera ativacao inicial PQ
-osimState.getY.set(53,0); %zera ativacao inicial SUP
+osimState.getY.set(42,0); %zera ativacao inicial ECRL
+osimState.getY.set(44,0); %zera ativacao inicial ECRB
+osimState.getY.set(46,0); %zera ativacao inicial ECU
+osimState.getY.set(48,0); %zera ativacao inicial FCR
+osimState.getY.set(50,0); %zera ativacao inicial FCU
+osimState.getY.set(52,0); %zera ativacao inicial PQ
+osimState.getY.set(54,0); %zera ativacao inicial SUP
 
 
 
@@ -158,14 +157,17 @@ osimModel.equilibrateMuscles(osimState); %solve for equilibrium similiar
 %Controls function
 controlsFuncHandle = @OsimControlsFcn;
 
-%Integrate plant using Matlab Integrator
-SimuInfo.timeSpan = [0:SimuInfo.Ts:SimuInfo.Tend];
-integratorName = 'ode1'; %fixed step Dormand-Prince method of order 5
-integratorOptions = odeset('RelTol', 1e-1, 'AbsTol', 1e-2, 'MaxStep', 1e-4);
-SimuInfo.osimplot=true;
+
+
 
 %% Run Simulation
-% set(gcf, 'color', 'white');
+
+if strcmp(SimuInfo.SimulationGoal, 'idtf') || strcmp(SimuInfo.SimulationGoal, 'validation')
+    global U
+    global XDot
+    U=[];
+    XDot=[];
+end
 
 tic
        motionData = IntegrateOsimPlant(osimModel,integratorName,SimuInfo,integratorOptions);
@@ -173,7 +175,6 @@ tic
 elapsedTime=toc
 
 SimuInfo.elapsedTime=elapsedTime;
-
 
 formatOut = 'yyyy/mm/dd/HH/MM/SS';
 date=datestr(now,formatOut);
@@ -184,9 +185,12 @@ indir=strcat(indir,'\simulations');
 filename=strcat(date,'_DScQuali');
 extension='.mat';
 motionFilename=fullfile(indir,[filename extension]);
-
-
 save(motionFilename,'motionData','SimuInfo');
 
 
-
+if strcmp(SimuInfo.SimulationGoal, 'idtf') || strcmp(SimuInfo.SimulationGoal, 'validation')
+    filename=strcat(date,'_DScQuali_IDTFVector');
+    motionFilename=fullfile(indir,[filename extension]);
+    save(motionFilename,'motionData','SimuInfo', 'U');
+    disp(motionFilename)
+end
