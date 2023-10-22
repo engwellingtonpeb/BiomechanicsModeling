@@ -14,6 +14,9 @@ if LinStabilityFlag
 
     SimuInfo.Tend=10;
     SimuInfo.Ts=1e-3;
+
+    SimuInfo.PltFlag=0;
+
     SimuInfo.ModelParams=ModelParams;
     
     %Config Simulations using Matlab Integrator
@@ -163,9 +166,9 @@ if LinStabilityFlag
         elapsedTime=toc;
         SimuInfo.elapsedTime=elapsedTime;
         
-        [Metrics] = JSD(motionData)
+        [Jmetrics] = JSD(motionData)
         
-        J=Metrics.JSD; %of tremor freq
+        J=Jmetrics.freq+Jmetrics.Phi+Jmetrics.Psi; %of tremor freq
     catch MExc
         if ~isempty(MExc.message)
              J=1e5;

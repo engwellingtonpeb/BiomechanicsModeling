@@ -2968,3 +2968,643 @@ elFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model
 [2023-10-22 10:46:01.853] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
 [2023-10-22 10:46:01.853] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
 [2023-10-22 10:46:01.854] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 10:52:57.645] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 10:52:57.688] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 10:52:57.689] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 10:52:57.690] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 10:53:17.179] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 10:53:17.204] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 10:53:17.204] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 10:53:17.205] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 11:04:44.662] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 11:04:44.691] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 11:04:44.691] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 11:04:44.692] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 11:09:10.174] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 11:09:10.204] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 11:09:10.205] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 11:09:10.206] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 11:12:40.305] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 11:12:40.327] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 11:12:40.327] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 11:12:40.328] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 11:16:52.345] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 11:16:52.370] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 11:16:52.370] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 11:16:52.371] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 11:17:08.416] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 11:17:08.444] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 11:17:08.445] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 11:17:08.445] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 11:20:17.347] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 11:20:17.370] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 11:20:17.370] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 11:20:17.371] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 11:26:17.874] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 11:26:17.902] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 11:26:17.903] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 11:26:17.904] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 11:33:18.226] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 11:33:18.253] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 11:33:18.253] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 11:33:18.254] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:12:02.174] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:12:02.207] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:12:02.207] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:12:02.208] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:15:32.938] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:15:32.963] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:15:32.964] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:15:32.964] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:20:56.283] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:20:56.306] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:20:56.307] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:20:56.307] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:23:45.458] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:23:45.494] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:23:45.494] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:23:45.495] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:24:11.031] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:24:11.063] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:24:11.064] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:24:11.065] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:25:03.290] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:25:03.317] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:25:03.317] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:25:03.319] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:29:53.478] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:29:53.506] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:29:53.507] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:29:53.508] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:38:56.567] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:38:56.621] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:38:56.622] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:38:56.623] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:39:43.811] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:39:43.836] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:39:43.836] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:39:43.837] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:41:32.204] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:41:32.241] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:41:32.242] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:41:32.243] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:41:38.321] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:41:38.344] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:41:38.344] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:41:38.345] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:48:31.700] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:48:31.727] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:48:31.728] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:48:31.729] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:49:16.966] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:49:16.988] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:49:16.988] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:49:16.988] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:49:22.180] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:49:22.272] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:49:22.272] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:49:22.273] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:49:28.786] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:49:28.843] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:49:28.844] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:49:28.844] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:50:15.041] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:50:15.062] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:50:15.063] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:50:15.063] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:51:03.054] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:51:03.077] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:51:03.077] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:51:03.078] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:51:51.605] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:51:51.626] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:51:51.627] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:51:51.627] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:51:57.587] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:51:57.609] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:51:57.609] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:51:57.610] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:52:45.620] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:52:45.646] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:52:45.646] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:52:45.647] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:52:53.480] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:52:53.502] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:52:53.503] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:52:53.503] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:52:59.597] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:52:59.620] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:52:59.620] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:52:59.621] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:53:05.443] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:53:05.465] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:53:05.466] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:53:05.466] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:53:49.316] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:53:49.339] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:53:49.340] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:53:49.341] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:54:25.806] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:54:25.829] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:54:25.829] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:54:25.830] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:55:17.287] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:55:17.310] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:55:17.310] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:55:17.311] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:56:08.737] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:56:08.760] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:56:08.761] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:56:08.761] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:57:21.434] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:57:21.456] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:57:21.456] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:57:21.457] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:58:30.658] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:58:30.680] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:58:30.680] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:58:30.681] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 12:59:49.600] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 12:59:49.623] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 12:59:49.624] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 12:59:49.624] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:02:47.281] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:02:47.304] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:02:47.305] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:02:47.305] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:03:05.223] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:03:05.245] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:03:05.245] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:03:05.245] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:39:55.615] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:39:55.669] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:39:55.669] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:39:55.670] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:40:34.967] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:40:34.996] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:40:34.996] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:40:34.997] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:41:20.545] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:41:20.585] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:41:20.585] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:41:20.587] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:41:36.281] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:41:36.305] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:41:36.306] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:41:36.307] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:42:15.199] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:42:15.226] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:42:15.227] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:42:15.228] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:42:53.282] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:42:53.308] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:42:53.309] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:42:53.310] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:43:35.200] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:43:35.297] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:43:35.297] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:43:35.298] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:47:10.108] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:47:10.163] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:47:10.164] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:47:10.164] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:47:16.150] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:47:16.173] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:47:16.174] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:47:16.174] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:50:36.765] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:50:36.795] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:50:36.795] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:50:36.797] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:20.292] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:20.318] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:20.318] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:20.319] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:20.656] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:20.678] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:20.678] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:20.679] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:21.044] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:21.080] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:21.080] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:21.081] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:21.411] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:21.434] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:21.435] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:21.435] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:21.747] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:21.771] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:21.771] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:21.772] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:22.078] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:22.101] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:22.101] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:22.102] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:22.388] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:22.409] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:22.410] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:22.410] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:22.703] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:22.725] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:22.726] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:22.726] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:23.015] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:23.036] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:23.037] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:23.037] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:23.333] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:23.357] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:23.358] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:23.358] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:23.662] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:23.684] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:23.685] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:23.685] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:24.000] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:24.025] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:24.025] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:24.026] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:24.317] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:24.340] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:24.340] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:24.341] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:24.642] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:24.663] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:24.663] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:24.663] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:24.958] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:24.981] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:24.982] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:24.982] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:25.269] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:25.292] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:25.292] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:25.293] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:25.580] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:25.603] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:25.604] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:25.604] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:25.915] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:25.942] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:25.942] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:25.943] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:26.229] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:26.252] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:26.252] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:26.252] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:26.586] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:26.608] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:26.608] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:26.609] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:26.889] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:26.910] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:26.910] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:26.910] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:27.196] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:27.219] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:27.219] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:27.220] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:27.506] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:27.537] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:27.537] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:27.537] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:27.850] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:27.873] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:27.873] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:27.874] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:28.210] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:28.233] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:28.234] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:28.234] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:28.536] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:28.558] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:28.559] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:28.559] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:28.900] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:29.103] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:29.104] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:29.104] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:29.419] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:29.443] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:29.443] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:29.444] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:29.753] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:29.774] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:29.775] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:29.775] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:30.088] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:30.112] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:30.112] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:30.113] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:54:50.093] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:54:50.119] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:54:50.120] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:54:50.121] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 13:55:24.055] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 13:55:24.079] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 13:55:24.079] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 13:55:24.080] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:00:20.659] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:00:20.687] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:00:20.687] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:00:20.688] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:00:39.886] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:00:39.909] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:00:39.909] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:00:39.910] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:03:08.922] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:03:08.950] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:03:08.951] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:03:08.951] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:03:35.989] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:03:36.011] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:03:36.011] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:03:36.012] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:03:39.707] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:03:39.732] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:03:39.733] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:03:39.734] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:04:08.979] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:04:09.012] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:04:09.012] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:04:09.012] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:04:12.604] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:04:12.627] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:04:12.627] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:04:12.627] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:04:15.971] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:04:15.994] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:04:15.994] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:04:15.995] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:04:20.382] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:04:20.405] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:04:20.406] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:04:20.406] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:04:51.286] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:04:51.308] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:04:51.308] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:04:51.308] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:04:55.509] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:04:55.531] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:04:55.531] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:04:55.532] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:05:27.457] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:05:27.480] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:05:27.480] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:05:27.480] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:13:26.432] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:13:26.437] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:13:26.437] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:13:26.440] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:13:26.442] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:13:26.450] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:13:26.463] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:13:26.621] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:13:26.646] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:13:26.651] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:13:26.654] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:13:26.659] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:13:26.662] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:13:26.662] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:13:26.664] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:13:26.665] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:13:26.667] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:13:26.668] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:13:26.669] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:13:26.671] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:13:26.673] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:13:26.675] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:13:26.677] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:13:26.677] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:13:26.678] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:13:26.680] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:13:26.680] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:13:26.681] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:13:26.682] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:13:26.683] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:13:26.684] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:13:26.686] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:13:26.689] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:13:26.691] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:13:26.693] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:13:26.773] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:13:26.776] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:13:26.779] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:13:39.584] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:13:39.586] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:13:39.631] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:13:39.632] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:13:39.634] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:13:39.650] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:13:39.650] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:13:39.651] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:14:54.757] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:14:54.845] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:14:54.846] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:14:54.850] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:14:54.928] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:14:55.002] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:14:55.002] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:14:55.004] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:14:55.009] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:14:55.085] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:14:55.086] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:14:55.089] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:14:55.519] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:14:55.556] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:14:55.586] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:14:55.588] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:14:55.590] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:14:55.645] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:14:55.646] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:14:55.649] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:14:55.681] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:14:55.693] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:14:55.756] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:14:55.757] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:14:55.759] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:14:55.766] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:14:55.767] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:14:55.769] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:14:55.797] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:14:55.859] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:14:55.860] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:14:55.862] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:15:07.461] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:15:07.577] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:15:07.579] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:15:07.582] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:15:08.825] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:15:08.922] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:15:08.926] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:15:08.933] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:15:10.759] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:15:10.843] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:15:10.844] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:15:10.847] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:15:18.706] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:15:18.786] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:15:18.787] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:15:18.788] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:15:36.545] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:15:36.629] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:15:36.631] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:15:36.635] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:15:48.271] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:15:48.354] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:15:48.355] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:15:48.356] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:15:58.841] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:15:59.101] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:15:59.102] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:15:59.103] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:16:23.126] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:16:23.212] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:16:23.213] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:16:23.216] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:16:24.955] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:16:25.031] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:16:25.032] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:16:25.035] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:16:25.182] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:16:25.255] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:16:25.256] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:16:25.257] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:16:25.657] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:16:25.742] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:16:25.744] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:16:25.746] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:16:25.865] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:16:25.946] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:16:25.949] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:16:25.952] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:16:26.770] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:16:26.840] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:16:26.842] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:16:26.844] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:16:26.860] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:16:26.948] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:16:26.949] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:16:26.952] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:16:35.297] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:16:35.383] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:16:35.385] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:16:35.388] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:16:36.356] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:16:36.437] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:16:36.438] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:16:36.441] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:16:46.246] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:16:46.318] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:16:46.319] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:16:46.322] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:16:49.942] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:16:50.033] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:16:50.034] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:16:50.036] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:17:00.820] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:17:00.885] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:17:00.886] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:17:00.888] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:17:24.473] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:17:24.618] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:17:24.620] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:17:24.621] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:17:51.408] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:17:51.493] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:17:51.494] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:17:51.497] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:17:53.643] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:17:53.714] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:17:53.715] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:17:53.717] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:17:53.981] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:17:54.066] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:17:54.067] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:17:54.069] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:17:55.184] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:17:55.252] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:17:55.253] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:17:55.255] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:17:56.037] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:17:56.122] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:17:56.123] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:17:56.126] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:17:58.738] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:17:58.794] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:17:58.794] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:17:58.795] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:18:02.990] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:18:03.057] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:18:03.059] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:18:03.063] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:18:14.251] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:18:14.345] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:18:14.347] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:18:14.352] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:18:29.490] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:18:29.760] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:18:29.761] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:18:29.763] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:18:50.688] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:18:50.762] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:18:50.762] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:18:50.763] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:20:26.256] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:20:26.257] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:20:26.293] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:20:26.297] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:20:26.341] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:20:26.342] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:20:26.344] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:20:26.377] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:20:26.378] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:20:26.379] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:20:26.390] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:20:26.391] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:20:26.393] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:20:26.504] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:20:26.545] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:20:26.547] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:20:26.779] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:20:26.787] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:20:26.800] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:20:26.802] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:20:26.811] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:20:26.843] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:20:26.844] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:20:26.847] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:20:26.848] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:20:26.850] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:20:26.852] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:20:26.854] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:20:26.869] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:20:26.871] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:20:26.871] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:20:26.871] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:20:26.873] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:20:26.875] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:20:26.875] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:20:26.918] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:20:26.920] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:20:26.923] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:20:35.267] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:20:35.321] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:20:35.322] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:20:35.323] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:20:35.694] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:20:35.733] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:20:35.733] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:20:35.734] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:20:37.473] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:20:37.547] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:20:37.548] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:20:37.550] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:20:46.131] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:20:46.387] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:20:46.388] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:20:46.390] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.
+[2023-10-22 14:21:03.722] [info] Loaded model Right from file D:\06_BiomechCodeRepo\BiomechanicsModeling\DSc2023_v2\ModelFilesOsim41\MoBL-ARMS Upper Extremity Model\Benchmarking Simulations\4.1 Model with Millard-Schutte Matched Curves\MOBL_ARMS_module2_4_allmuscles.osim
+[2023-10-22 14:21:03.812] [warning] Coordinate.setValue:  coordinate elv_angle is locked. Unable to change its value.
+[2023-10-22 14:21:03.814] [warning] Coordinate.setValue:  coordinate shoulder_elv is locked. Unable to change its value.
+[2023-10-22 14:21:03.818] [warning] Coordinate.setValue:  coordinate elbow_flexion is locked. Unable to change its value.

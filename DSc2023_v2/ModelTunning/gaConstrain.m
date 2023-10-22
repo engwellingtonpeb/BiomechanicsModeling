@@ -28,6 +28,23 @@ function [c,ceq] = gaConstrain(ModelParams)
     c(7)=x7-x8;
     c(8)=x8-1-(x10/x19);
 
+  %% Flags Oscillator add to control effort
+
+    x11=ModelParams(11);
+    x12=ModelParams(12);
+    x13=ModelParams(13);
+    x14=ModelParams(14);
+    x15=ModelParams(15);
+    x16=ModelParams(16);
+    x17=ModelParams(17);
+    x18=ModelParams(18);
+
+
+    c(9)=x11+x12-1;
+    c(10)=x13+x14-1;
+    c(11)=x15+x16-1;
+    c(12)=x17+x18-1;
+
 
 
 

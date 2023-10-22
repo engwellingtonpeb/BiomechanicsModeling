@@ -108,6 +108,13 @@ persistent Y1
 
 persistent Kf
 persistent j1
+
+    B=SimuInfo.ModelParams(7); %beta
+    h=SimuInfo.ModelParams(8); %h
+    rosc=SimuInfo.ModelParams(9); %r
+    tau1=SimuInfo.ModelParams(10);%tau1
+    tau2=SimuInfo.ModelParams(19);%tau2
+
 if (t==0)
     j1=0;
     Kf=2;
@@ -116,8 +123,11 @@ else
 
 if (rem(j1,100)==0)
         P=randsample(SimuInfo.P,1);
-        Tosc=1/P;
-        Kf=(Tosc)/.1051;
+        %Tosc=1/P;
+        %Kf=(Tosc)/.1051;
+        Kf=(1/(2*pi*P))*sqrt(1/(tau1*tau2)); % Zhang, Dingguo, et al. "Neural 
+        % oscillator based control for pathological tremor suppression via 
+        % functional electrical stimulation." Control Engineering Practice 19.1 (2011): 74-88.
      
 end
     j1=j1+1;
@@ -125,11 +135,7 @@ end
 end
     
 
-    B=SimuInfo.ModelParams(7); %beta
-    h=SimuInfo.ModelParams(8); %h
-    rosc=SimuInfo.ModelParams(9); %r
-    tau1=SimuInfo.ModelParams(10);%tau1
-    tau2=SimuInfo.ModelParams(19);%tau2
+
 
 %     tau1=.1;
 %     tau2=.1;
@@ -152,7 +158,10 @@ end
     end
 
 
-    %%euler p/ EDO
+    %%euler p/ EDO (Zhang, Dingguo, et al. "Neural oscillator based control for 
+    % pathological tremor suppression via functional electrical stimulation." 
+    % Control Engineering Practice 19.1 (2011): 74-88.)
+
     x1=X(1,end)+dh*((1/(Kf*tau1))*((-X(1,end))-B*V(1,end)-h*max(X(2,end),0)+A*s1+rosc));
     y1=max(x1,0);
     v1=V(1,end)+dh*((1/(Kf*tau2))*(-V(1,end)+max(X(1,end),0)));
@@ -187,22 +196,22 @@ end
 %% Tremor Affected Muscle Excitation 
 
 if t<.1 %initializing model
-    u(1)=0.01;
-    u(2)=0.01;
+    u(1)=0.1;
+    u(2)=0.00;
     u(3)=0.01;
     u(4)=0.01;
 
 elseif t<1 && t>=0.1
-    u(1)=0.1*ALPHA1*u(1); %ECRL
-    u(2)=0.1*ALPHA2*u(2); %FCU
-    u(3)=0.1*ALPHA3*u(3); %PQ
-    u(4)=0.1*ALPHA4*u(4); %SUP
+    u(1)=ALPHA1*u(1); %ECRL
+    u(2)=ALPHA2*u(2); %FCU
+    u(3)=ALPHA3*u(3); %PQ
+    u(4)=ALPHA4*u(4); %SUP
 else
 
-    u(1)=(0.1*ALPHA1*u(1))+SimuInfo.ModelParams(11)*d(1)+SimuInfo.ModelParams(12)*d(2); %ECRL
-    u(2)=(0.1*ALPHA2*u(2))+SimuInfo.ModelParams(13)*d(1)+SimuInfo.ModelParams(14)*d(2); %FCU
-    u(3)=(0.1*ALPHA3*u(3))+SimuInfo.ModelParams(15)*d(1)+SimuInfo.ModelParams(16)*d(2); %PQ
-    u(4)=(0.1*ALPHA4*u(4))+SimuInfo.ModelParams(17)*d(1)+SimuInfo.ModelParams(18)*d(2); %SUP
+    u(1)=(ALPHA1*u(1))+SimuInfo.ModelParams(11)*d(1)+SimuInfo.ModelParams(12)*d(2); %ECRL
+    u(2)=(ALPHA2*u(2))+SimuInfo.ModelParams(13)*d(1)+SimuInfo.ModelParams(14)*d(2); %FCU
+    u(3)=(ALPHA3*u(3))+SimuInfo.ModelParams(15)*d(1)+SimuInfo.ModelParams(16)*d(2); %PQ
+    u(4)=(ALPHA4*u(4))+SimuInfo.ModelParams(17)*d(1)+SimuInfo.ModelParams(18)*d(2); %SUP
 
 end
 
@@ -241,7 +250,7 @@ if (t==0)
 else
 
 
- if (rem(j,100)==0)
+ if (rem(j,100)==0) && (SimuInfo.PltFlag==1)
 
     t
     subplot(4,1,1)

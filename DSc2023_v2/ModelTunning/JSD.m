@@ -1,4 +1,4 @@
-function [Metrics] = JSD(motionData)
+function [J] = JSD(motionData)
 %-------------------------------------------------------------------------%
 %                  Federal University of Rio de Janeiro                   %
 %                 Biomedical Engineering Program - COPPE                  %
@@ -182,7 +182,7 @@ for ij=1:1 %6 JANELAS DE 10 SEGUNDOS
 
 end     
 
-
+J=struct();
 
     %% freq
     P1=[P1 P1 P1 P1 P1 P1];
@@ -192,6 +192,27 @@ end
     w=2*iqr(P)*length(P)^(-1/3);
     edges=[min(P),max(P)];
     
-    figure(1)
+
     [Metrics] = ModelMetrics(P,P1,w,edges,w1,edges1); % JSD of tremor freq 
+    J.freq=sqrt(Metrics.JSD^2+Metrics.dI^2+Metrics.CentroidError^2);
+
+    %% phi
+    w=2*iqr(Phi_ref)*length(Phi_ref)^(-1/3);
+    edges=[min(Phi_ref),max(Phi_ref)];
+    w1=2*iqr(Phi_simu)*length(Phi_simu)^(-1/3);
+    edges1=[min(Phi_simu),max(Phi_simu)];
+
+    [Metrics] = ModelMetrics(Phi_ref,Phi_simu,w,edges,w1,edges1); % JSD of tremor Phi
+    J.Phi=sqrt(Metrics.JSD^2+Metrics.dI^2+Metrics.CentroidError^2);
+
+
+
+    %% psi
+    w=2*iqr(Psi_ref)*length(Psi_ref)^(-1/3);
+    edges=[min(Psi_ref),max(Psi_ref)];
+    w1=2*iqr(Psi_simu)*length(Psi_simu)^(-1/3);
+    edges1=[min(Psi_simu),max(Psi_simu)];
+
+    [Metrics] = ModelMetrics(Psi_ref,Psi_simu,w,edges,w1,edges1); % JSD of tremor Psi
+    J.Psi=sqrt(Metrics.JSD^2+Metrics.dI^2+Metrics.CentroidError^2);
 end

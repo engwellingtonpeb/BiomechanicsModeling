@@ -39,15 +39,15 @@ end
 h=h./sum(h); %normalization
 k=k./sum(k);
 
-%% Intersection Distance
-% 
-% num=[];
-% for i=1:length(h)
-%     num(i)= min(h(i),k(i));
-% end
-% Metrics.dI=(sum(num)/sum(h));
-% 
-% %% L-1 distance (Manhattan)
+%% error of Intersection Distance = 1- Intersection Distance
+
+num=[];
+for i=1:length(h)
+    num(i)= min(h(i),k(i));
+end
+Metrics.dI=1-(sum(num)/sum(h));
+
+%% L-1 distance (Manhattan)
 % H=cumsum(h);
 % K=cumsum(k);
 % Metrics.dL1=sum(abs(H-K));
@@ -69,7 +69,7 @@ JSD=0.5*DKL1+0.5*DKL2;
 
 Metrics.JSD=JSD;
 
-close all
+
 
 % %% Kullback-Liebler Divergence
 % k(k==0) = 1e6; % division by zero problem
@@ -86,14 +86,15 @@ close all
 % Metrics.Kurtosis=[kurtosis(x1) kurtosis(y1)];
 % Metrics.Skewness=[skewness(x1) skewness(y1)];
 % 
-% %centroid
-% [yip,xip] = histcounts(x1);
-% [yiq,xiq] = histcounts(y1);
-% yip(end+1)=yip(end);
-% yiq(end+1)=yiq(end);
-% Metrics.centroid_P=[sum(xip.*yip)/sum(yip) sum(yip.*xip)/sum(xip)];
-% Metrics.centroid_Q=[sum(xiq.*yiq)/sum(yiq) sum(yiq.*xiq)/sum(xiq)];
+%% centroid
+[yip,xip] = histcounts(x1);
+[yiq,xiq] = histcounts(y1);
+yip(end+1)=yip(end);
+yiq(end+1)=yiq(end);
+centroid_P=[sum(xip.*yip)/sum(yip) sum(yip.*xip)/sum(xip)];
+centroid_Q=[sum(xiq.*yiq)/sum(yiq) sum(yiq.*xiq)/sum(xiq)];
 
+Metrics.CentroidError=abs(centroid_P(1)-centroid_Q(1));
 
 close all
 end
