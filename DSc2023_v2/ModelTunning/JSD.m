@@ -1,4 +1,4 @@
-function [J] = JSD(motionData)
+function [J] = JSD(motionData, SimuInfo)
 %-------------------------------------------------------------------------%
 %                  Federal University of Rio de Janeiro                   %
 %                 Biomedical Engineering Program - COPPE                  %
@@ -26,7 +26,7 @@ P1=[];
  
       
 
-     pd011=table2array(pdluis4); %usou para o artigo pdluis4
+    pd011=table2array(pdluis4); %usou para o artigo pdluis4
     
 
      %EMG Extensores e Flexores
@@ -60,7 +60,7 @@ P1=[];
      
      
     ts_gyro=1/Fs_gyro;
-    Tjan=1;
+    Tjan=.5;
     Njan=round(Tjan/ts_gyro); %qtd ptos na janela
     r=rectwin(Njan);%Define janela RETANGULAR de comprimento Njan
     h=hamming(Njan);%Define janela HAMMING de comprimento Njan
@@ -143,22 +143,33 @@ Psidot_ref=Xgyro_f(:,1);
 
 
 
-Phi_simu=[Phi_simu; rad2deg(motionData.data((1000:end),19))]; %~10000 é o numero da amostra onde entra o oscilador
-Psi_simu=[Psi_simu; rad2deg(motionData.data((1000:end),17))];
-Phidot_simu=[Phidot_simu; rad2deg(motionData.data((1000:end),39))];
-Psidot_simu=[Psidot_simu; rad2deg(motionData.data((1000:end),37))];
-a_ecrl=[a_ecrl; motionData.data((1000:end),44)];  %ativ ECRL
-a_fcu=[a_fcu; motionData.data((1000:end),52)];  %ativ FCU
+Phi_simu=[Phi_simu; rad2deg(motionData.data((2000:end),19))]; %~2000 é o numero da amostra onde entra o oscilador
+Psi_simu=[Psi_simu; rad2deg(motionData.data((2000:end),17))];
+Phidot_simu=[Phidot_simu; rad2deg(motionData.data((2000:end),39))];
+Psidot_simu=[Psidot_simu; rad2deg(motionData.data((2000:end),37))];
+a_ecrl=[a_ecrl; motionData.data((2000:end),44)];  %ativ ECRL
+a_fcu=[a_fcu; motionData.data((2000:end),52)];  %ativ FCU
 
 
-%spectrogram from simulation
+% spectrogram from simulation
+    
+    
+
+    ts_simu=SimuInfo.Ts;
+    Fs_simu=1/ts_simu;
+    Tjan=.5;
+    Njan=round(Tjan/ts_simu); %qtd ptos na janela
+    r=rectwin(Njan);%Define janela RETANGULAR de comprimento Njan
+    h=hamming(Njan);%Define janela HAMMING de comprimento Njan
+    N=length(Phidot_simu);
+    w1=(floor(N));
 
 
 for ij=1:1 %6 JANELAS DE 10 SEGUNDOS
     
     F=0:.1:20;
     overlap=.5*Njan; % 50% overlap
-    [s,w,t] =spectrogram(Phidot_simu(((w1*ij-w1+1):(w1*(ij+1)-w1-1)),1),h,overlap,F,Fs_gyro,'yaxis');
+    [s,w,t] =spectrogram(Phidot_simu(((w1*ij-w1+1):(w1*(ij+1)-w1-1)),1),h,overlap,F,Fs_simu,'yaxis');
     s=abs((s)); %(ANALISE DE JANELAS DE 10 SEGUNDOS)
     s=s./max(max(s)); %normaliza a amplitude (q nao é importante na analise)
     figure(6+ij)
@@ -197,6 +208,8 @@ J=struct();
     J.freq=sqrt(Metrics.JSD^2+Metrics.dI^2+Metrics.CentroidError^2);
 
     %% phi
+    Phi_ref=Phi_ref+mean(Phi_simu);
+
     w=2*iqr(Phi_ref)*length(Phi_ref)^(-1/3);
     edges=[min(Phi_ref),max(Phi_ref)];
     w1=2*iqr(Phi_simu)*length(Phi_simu)^(-1/3);
@@ -208,6 +221,8 @@ J=struct();
 
 
     %% psi
+    Psi_ref=Psi_ref+mean(Psi_simu);
+
     w=2*iqr(Psi_ref)*length(Psi_ref)^(-1/3);
     edges=[min(Psi_ref),max(Psi_ref)];
     w1=2*iqr(Psi_simu)*length(Psi_simu)^(-1/3);
@@ -215,4 +230,11 @@ J=struct();
 
     [Metrics] = ModelMetrics(Psi_ref,Psi_simu,w,edges,w1,edges1); % JSD of tremor Psi
     J.Psi=sqrt(Metrics.JSD^2+Metrics.dI^2+Metrics.CentroidError^2);
+
+    %% Erro de setpoint
+     global ERR_POS
+
+     J.err_phi= norm(ERR_POS(:,1));
+     J.err_psi= norm(ERR_POS(:,2));
+
 end

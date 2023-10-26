@@ -34,7 +34,8 @@ function modelControls = OsimControlsFcn(osimModel, osimState,t,SimuInfo)
 
 %% Read plant angles for feedback and avoid NaN 
 
-persistent ERR_POS
+global ERR_POS
+
 persistent xk1
 persistent u
 global U
@@ -43,11 +44,25 @@ global U
 
    
 %% Plant control implementation 
-phi_ref=deg2rad(SimuInfo.Setpoint(1));
-psi_ref=deg2rad(SimuInfo.Setpoint(2));
+% if t<=2
+    phi_ref=deg2rad(SimuInfo.Setpoint(1));
+    psi_ref=deg2rad(SimuInfo.Setpoint(2));
+% elseif t>2 && t<=5
+%     phi_ref=deg2rad(10);
+%     psi_ref=deg2rad(10);
+% 
+%  elseif t>5 && t<=8
+%     phi_ref=deg2rad(-5);
+%     psi_ref=deg2rad(25);
+% 
+%  elseif t>8 && t<=10
+%     phi_ref=deg2rad(2);
+%     psi_ref=deg2rad(20);
+% end
 
 %references 
-r=[0 0 0 0 phi_ref psi_ref 0 0]'; % asup aecrl afcu apq phi psi phidot psidot
+r=[0.01 0.01 0.01 0.01 phi_ref psi_ref 0 0]'; % asup aecrl afcu apq phi psi phidot psidot
+
 
 % states
 asup=osimState.getY().get(54);
@@ -69,9 +84,12 @@ e=r-x;
 
 err_pos=[phi_ref-phi ; psi_ref-psi];
 
-ERR_POS=[err_pos];
+
 eps_phi=rad2deg(err_pos(1));
 eps_psi=rad2deg(err_pos(2));
+
+ERR_POS=[ERR_POS; [eps_phi eps_psi]];
+
 
 %% Control Signal Generation    
 
@@ -109,11 +127,19 @@ persistent Y1
 persistent Kf
 persistent j1
 
-    B=SimuInfo.ModelParams(7); %beta
-    h=SimuInfo.ModelParams(8); %h
-    rosc=SimuInfo.ModelParams(9); %r
-    tau1=SimuInfo.ModelParams(10);%tau1
-    tau2=SimuInfo.ModelParams(19);%tau2
+    B=SimuInfo.ModelParams(8); %beta
+    h=SimuInfo.ModelParams(9); %h
+    rosc=SimuInfo.ModelParams(10); %r
+    tau1=SimuInfo.ModelParams(11);%tau1
+    tau2=SimuInfo.ModelParams(12);%tau2
+
+
+%     tau1=.1;
+%     tau2=.1;
+%     B=2.5;
+%     A=5;
+%     h=2.5;
+%     rosc=1;
 
 if (t==0)
     j1=0;
@@ -121,10 +147,10 @@ if (t==0)
 
 else
 
-if (rem(j1,100)==0)
+if (rem(j1,1000)==0)
         P=randsample(SimuInfo.P,1);
-        %Tosc=1/P;
-        %Kf=(Tosc)/.1051;
+%         Tosc=1/P;
+%         Kf=(Tosc)/.1051;
         Kf=(1/(2*pi*P))*sqrt(1/(tau1*tau2)); % Zhang, Dingguo, et al. "Neural 
         % oscillator based control for pathological tremor suppression via 
         % functional electrical stimulation." Control Engineering Practice 19.1 (2011): 74-88.
@@ -137,12 +163,6 @@ end
 
 
 
-%     tau1=.1;
-%     tau2=.1;
-%     B=2.5;
-     A=5;
-%     h=2.5;
-%     rosc=1;
 
 
     %dh=0.0001;
@@ -158,15 +178,15 @@ end
     end
 
 
-    %%euler p/ EDO (Zhang, Dingguo, et al. "Neural oscillator based control for 
+    %%Implemented as (Zhang, Dingguo, et al. "Neural oscillator based control for 
     % pathological tremor suppression via functional electrical stimulation." 
     % Control Engineering Practice 19.1 (2011): 74-88.)
 
-    x1=X(1,end)+dh*((1/(Kf*tau1))*((-X(1,end))-B*V(1,end)-h*max(X(2,end),0)+A*s1+rosc));
+    x1=X(1,end)+dh*((1/(Kf*tau1))*((-X(1,end))-B*V(1,end)-h*max(X(2,end),0)+rosc));
     y1=max(x1,0);
     v1=V(1,end)+dh*((1/(Kf*tau2))*(-V(1,end)+max(X(1,end),0)));
 
-    x2= X(2,end)+dh*((1/(Kf*tau1))*((-X(2,end))-B*V(2,end)-h*max(X(1,end),0)-A*s2+rosc));
+    x2= X(2,end)+dh*((1/(Kf*tau1))*((-X(2,end))-B*V(2,end)-h*max(X(1,end),0)+rosc));
     y2=max(x2,0);
     v2=V(2,end)+dh*((1/(Kf*tau2))*(-V(2,end)+max(X(2,end),0)));
 
@@ -195,23 +215,33 @@ end
 
 %% Tremor Affected Muscle Excitation 
 
+% ALPHA1=1;
+% ALPHA2=1;
+% ALPHA3=1;
+% ALPHA4=1;
+
 if t<.1 %initializing model
     u(1)=0.1;
     u(2)=0.00;
-    u(3)=0.01;
+    u(3)=0.1;
     u(4)=0.01;
 
-elseif t<1 && t>=0.1
-    u(1)=ALPHA1*u(1); %ECRL
-    u(2)=ALPHA2*u(2); %FCU
-    u(3)=ALPHA3*u(3); %PQ
-    u(4)=ALPHA4*u(4); %SUP
+elseif t<2 && t>=0.1
+    u(1)=2e6*ALPHA1*u(1); %ECRL
+    u(2)=1e6*ALPHA2*u(2); %FCU
+    u(3)=1e6*ALPHA3*u(3); %PQ
+    u(4)=1e6*ALPHA4*u(4); %SUP
 else
+% 
+    u(1)=(1e6*ALPHA1*u(1))+SimuInfo.ModelParams(13)*d(1)+SimuInfo.ModelParams(14)*d(2); %ECRL
+    u(2)=(1e6*ALPHA2*u(2))+SimuInfo.ModelParams(15)*d(1)+SimuInfo.ModelParams(16)*d(2); %FCU
+    u(3)=(1e6*ALPHA3*u(3))+SimuInfo.ModelParams(17)*d(1)+SimuInfo.ModelParams(18)*d(2); %PQ
+    u(4)=(1e6*ALPHA4*u(4))+SimuInfo.ModelParams(19)*d(1)+SimuInfo.ModelParams(20)*d(2); %SUP
 
-    u(1)=(ALPHA1*u(1))+SimuInfo.ModelParams(11)*d(1)+SimuInfo.ModelParams(12)*d(2); %ECRL
-    u(2)=(ALPHA2*u(2))+SimuInfo.ModelParams(13)*d(1)+SimuInfo.ModelParams(14)*d(2); %FCU
-    u(3)=(ALPHA3*u(3))+SimuInfo.ModelParams(15)*d(1)+SimuInfo.ModelParams(16)*d(2); %PQ
-    u(4)=(ALPHA4*u(4))+SimuInfo.ModelParams(17)*d(1)+SimuInfo.ModelParams(18)*d(2); %SUP
+%     u(1)=(1e6*ALPHA1*u(1))+0.5*d(1)+0*d(2); %ECRL
+%     u(2)=(1e6*ALPHA2*u(2))+0*d(1)+.5*d(2); %FCU
+%     u(3)=(1e6*ALPHA3*u(3))+.5*d(1)+0*d(2); %PQ
+%     u(4)=(1e6*ALPHA4*u(4))+0*d(1)+.5*d(2); %SUP
 
 end
 
@@ -241,7 +271,7 @@ end
     osimModel.updControls(osimState).set(3,0.01); %ECU
     osimModel.updControls(osimState).set(4,0.01); %FCR
 
-    U=[U; u];
+    U=[U; u'];
  
 %% ============  REAL TIME PLOT ===============
 persistent j
@@ -275,7 +305,7 @@ else
     hold on;
 
     subplot(4,1,4)
-    plot(t,d(1),'b.',t,d(2),'r.')
+    plot(t,u(3),'b.',t,u(4),'r.')
     axis([t-3 t -1 1])
     drawnow;
     grid on;

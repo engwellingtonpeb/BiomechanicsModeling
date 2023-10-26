@@ -11,11 +11,15 @@ import org.opensim.modeling.*
 
 if LinStabilityFlag
     %% Tremor Simulation for Tunning 
+    
+    disp('Controller Design - Finished')
+    disp('Osim Tunning - Loading...')
+
 
     SimuInfo.Tend=10;
-    SimuInfo.Ts=1e-3;
+    SimuInfo.Ts=1e-4;
 
-    SimuInfo.PltFlag=0;
+    SimuInfo.PltFlag=1;
 
     SimuInfo.ModelParams=ModelParams;
     
@@ -127,7 +131,7 @@ if LinStabilityFlag
     editableCoordSet.get('elbow_flexion').setLocked(osimState, true);
     
     %editableCoordSet.get('pro_sup').setValue(osimState, deg2rad(psini(SimuInfo.index)));
-    editableCoordSet.get('pro_sup').setValue(osimState, deg2rad(80));
+    editableCoordSet.get('pro_sup').setValue(osimState, deg2rad(30));
     editableCoordSet.get('pro_sup').setLocked(osimState, false);
     
     editableCoordSet.get('deviation').setValue(osimState, 0);
@@ -166,12 +170,12 @@ if LinStabilityFlag
         elapsedTime=toc;
         SimuInfo.elapsedTime=elapsedTime;
         
-        [Jmetrics] = JSD(motionData)
+        [Jmetrics] = JSD(motionData, SimuInfo)
         
-        J=Jmetrics.freq+Jmetrics.Phi+Jmetrics.Psi; %of tremor freq
+        J=[Jmetrics.freq Jmetrics.Phi Jmetrics.Psi] %Jmetrics.err_phi+Jmetrics.err_psi]; %of tremor freq
     catch MExc
         if ~isempty(MExc.message)
-             J=1e5;
+             J=[1e5 1e5 1e5];
              close all hidden
 
         end
@@ -179,6 +183,7 @@ if LinStabilityFlag
     end
 elapsedTime=toc;
 [elapsedTime J]
+
     
 else
     J=1e5; % custo alto - Não estável ou vazio

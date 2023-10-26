@@ -94,7 +94,7 @@ yiq(end+1)=yiq(end);
 centroid_P=[sum(xip.*yip)/sum(yip) sum(yip.*xip)/sum(xip)];
 centroid_Q=[sum(xiq.*yiq)/sum(yiq) sum(yiq.*xiq)/sum(xiq)];
 
-Metrics.CentroidError=abs(centroid_P(1)-centroid_Q(1));
+Metrics.CentroidError=abs((centroid_P(1)-centroid_Q(1))/centroid_P(1)); % normalizado
 
 close all
 end
